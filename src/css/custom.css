@@ -21,6 +21,14 @@
   --ifm-global-shadow-lw: 0 10px 30px rgba(15, 23, 42, 0.06);
   --ifm-global-radius: 18px;
   --docusaurus-highlighted-code-line-bg: rgba(29, 78, 216, 0.08);
+  --doc-ink-strong: #0f172a;
+  --doc-ink: #162033;
+  --doc-ink-muted: rgba(15, 23, 42, 0.74);
+  --doc-surface-border: rgba(15, 23, 42, 0.08);
+  --doc-surface: rgba(255, 255, 255, 0.96);
+  --doc-surface-alt: rgba(248, 250, 252, 0.92);
+  --doc-surface-soft: rgba(241, 245, 249, 0.84);
+  --doc-kicker-color: #3554c7;
 }
 
 [data-theme='dark'] {
@@ -37,6 +45,10 @@
   --ifm-heading-color: #eff6ff;
   --ifm-menu-color: rgba(226, 232, 240, 0.78);
   --docusaurus-highlighted-code-line-bg: rgba(124, 179, 255, 0.16);
+  --doc-surface-border: rgba(148, 163, 184, 0.22);
+  --doc-surface: rgba(248, 250, 252, 0.98);
+  --doc-surface-alt: rgba(241, 245, 249, 0.94);
+  --doc-surface-soft: rgba(226, 232, 240, 0.86);
 }
 
 html {
@@ -155,7 +167,7 @@ h6,
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #3554c7;
+  color: var(--doc-kicker-color);
 }
 
 .doc-summary {
@@ -163,7 +175,7 @@ h6,
   margin: 0.85rem 0 0;
   font-size: 1.05rem;
   line-height: 1.82;
-  color: rgba(15, 23, 42, 0.74);
+  color: var(--doc-ink-muted);
 }
 
 .doc-chip-row {
@@ -179,8 +191,8 @@ h6,
   padding: 0.55rem 0.8rem;
   border: 1px solid rgba(37, 99, 235, 0.12);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.8);
-  color: rgba(15, 23, 42, 0.82);
+  background: var(--doc-surface);
+  color: var(--doc-ink);
   font-size: 0.92rem;
   font-weight: 600;
 }
@@ -201,9 +213,9 @@ h6,
 
 .doc-card {
   padding: 1.25rem 1.3rem;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--doc-surface-border);
   border-radius: 1.45rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(241, 245, 249, 0.84));
+  background: linear-gradient(180deg, var(--doc-surface), var(--doc-surface-soft));
   box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
   transition:
     transform 180ms ease,
@@ -221,11 +233,12 @@ h6,
   margin: 0.8rem 0 0.65rem;
   font-size: 1.2rem;
   line-height: 1.12;
+  color: var(--doc-ink-strong);
 }
 
 .doc-card p {
   margin: 0;
-  color: rgba(15, 23, 42, 0.74);
+  color: var(--doc-ink-muted);
   line-height: 1.72;
 }
 
@@ -245,7 +258,7 @@ h6,
 
 .doc-callout {
   border: 1px solid rgba(37, 99, 235, 0.12);
-  background: linear-gradient(180deg, rgba(239, 246, 255, 0.9), rgba(248, 250, 252, 0.92));
+  background: linear-gradient(180deg, rgba(239, 246, 255, 0.9), var(--doc-surface-alt));
 }
 
 .doc-rail {
@@ -266,15 +279,15 @@ h6,
 
 .doc-placeholder {
   border: 1px dashed rgba(37, 99, 235, 0.25);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.92));
+  background: linear-gradient(180deg, var(--doc-surface), var(--doc-surface-alt));
 }
 
 .doc-diagram {
   margin: 1.4rem 0 1.9rem;
   padding: 1rem;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--doc-surface-border);
   border-radius: 1.5rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 250, 252, 0.9));
+  background: linear-gradient(180deg, var(--doc-surface), var(--doc-surface-alt));
   box-shadow: 0 22px 70px rgba(15, 23, 42, 0.06);
 }
 
@@ -293,6 +306,42 @@ h6,
   margin: 0.85rem 0 0;
   font-size: clamp(2.3rem, 4vw, 3.7rem);
   line-height: 0.96;
+  color: var(--doc-ink-strong);
+}
+
+.doc-hero,
+.doc-card,
+.doc-callout,
+.doc-placeholder,
+.doc-diagram,
+.storybook-frameWrap {
+  color: var(--doc-ink);
+}
+
+.doc-hero {
+  border-color: var(--doc-surface-border);
+  background:
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 26%),
+    linear-gradient(180deg, var(--doc-surface), var(--doc-surface-alt));
+}
+
+.doc-hero :is(p, li),
+.doc-callout :is(p, li),
+.doc-placeholder :is(p, li),
+.doc-diagram :is(p, li) {
+  color: var(--doc-ink-muted);
+}
+
+.doc-hero :is(h1, h2, h3),
+.doc-callout :is(h1, h2, h3),
+.doc-placeholder :is(h1, h2, h3),
+.doc-diagram :is(h1, h2, h3),
+.doc-hero :is(strong, em),
+.doc-card :is(strong, em),
+.doc-callout :is(strong, em),
+.doc-placeholder :is(strong, em),
+.doc-diagram :is(strong, em) {
+  color: var(--doc-ink-strong);
 }
 
 .theme-doc-markdown .doc-card code,
@@ -348,9 +397,9 @@ h6,
 .storybook-frameWrap {
   overflow: hidden;
   min-height: 78vh;
-  border: 1px solid rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--doc-surface-border);
   border-radius: 1.6rem;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.88));
+  background: linear-gradient(180deg, var(--doc-surface), var(--doc-surface-soft));
   box-shadow: 0 28px 80px rgba(15, 23, 42, 0.08);
 }
 
