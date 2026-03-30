@@ -1,0 +1,1001 @@
+[
+  {
+    "title": "app",
+    "children": [
+      {
+        "title": "(auth)",
+        "children": [
+          {
+            "title": "forgot-password",
+            "children": [
+              {
+                "title": "request-reset",
+                "kind": 2,
+                "path": "app/(auth)/forgot-password/request-reset/README.md",
+                "isDeprecated": false,
+                "children": [
+                  {
+                    "title": "Functions",
+                    "children": [
+                      {
+                        "title": "default",
+                        "kind": 64,
+                        "path": "app/(auth)/forgot-password/request-reset/functions/default.md",
+                        "isDeprecated": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "verify-reset",
+                "kind": 2,
+                "path": "app/(auth)/forgot-password/verify-reset/README.md",
+                "isDeprecated": false,
+                "children": [
+                  {
+                    "title": "Functions",
+                    "children": [
+                      {
+                        "title": "default",
+                        "kind": 64,
+                        "path": "app/(auth)/forgot-password/verify-reset/functions/default.md",
+                        "isDeprecated": false
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "login",
+            "kind": 2,
+            "path": "app/(auth)/login/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "app/(auth)/login/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "register",
+            "kind": 2,
+            "path": "app/(auth)/register/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "app/(auth)/register/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "verify-email",
+            "kind": 2,
+            "path": "app/(auth)/verify-email/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "app/(auth)/verify-email/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "_layout",
+        "kind": 2,
+        "path": "app/_layout/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "default",
+                "kind": 64,
+                "path": "app/_layout/functions/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "auth",
+    "children": [
+      {
+        "title": "auth.actions",
+        "kind": 2,
+        "path": "auth/auth.actions/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "loginUser",
+                "kind": 64,
+                "path": "auth/auth.actions/functions/loginUser.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "requestProfileData",
+                "kind": 64,
+                "path": "auth/auth.actions/functions/requestProfileData.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "registerUser",
+                "kind": 64,
+                "path": "auth/auth.actions/functions/registerUser.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "sendOtpEmail",
+                "kind": 64,
+                "path": "auth/auth.actions/functions/sendOtpEmail.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "sendOtpCode",
+                "kind": 64,
+                "path": "auth/auth.actions/functions/sendOtpCode.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "requestPasswordReset",
+                "kind": 64,
+                "path": "auth/auth.actions/functions/requestPasswordReset.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "verifyPasswordReset",
+                "kind": 64,
+                "path": "auth/auth.actions/functions/verifyPasswordReset.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "auth.constants",
+        "kind": 2,
+        "path": "auth/auth.constants/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Variables",
+            "children": [
+              {
+                "title": "AUTH_FORM_INPUT_CONFIG",
+                "kind": 32,
+                "path": "auth/auth.constants/variables/AUTH_FORM_INPUT_CONFIG.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "AUTH_COPY",
+                "kind": 32,
+                "path": "auth/auth.constants/variables/AUTH_COPY.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "auth.consumer",
+        "kind": 2,
+        "path": "auth/auth.consumer/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "useAuth",
+                "kind": 64,
+                "path": "auth/auth.consumer/functions/useAuth.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "auth.context",
+        "kind": 2,
+        "path": "auth/auth.context/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Variables",
+            "children": [
+              {
+                "title": "default",
+                "kind": 32,
+                "path": "auth/auth.context/variables/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "auth.provider",
+        "kind": 2,
+        "path": "auth/auth.provider/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Interfaces",
+            "children": [
+              {
+                "title": "AuthProviderProps",
+                "kind": 256,
+                "path": "auth/auth.provider/interfaces/AuthProviderProps.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "default",
+                "kind": 64,
+                "path": "auth/auth.provider/functions/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "auth.types",
+        "kind": 2,
+        "path": "auth/auth.types/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Interfaces",
+            "children": [
+              {
+                "title": "AuthContextType",
+                "kind": 256,
+                "path": "auth/auth.types/interfaces/AuthContextType.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "AuthResponse",
+                "kind": 256,
+                "path": "auth/auth.types/interfaces/AuthResponse.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "AuthData",
+                "kind": 256,
+                "path": "auth/auth.types/interfaces/AuthData.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Type Aliases",
+            "children": [
+              {
+                "title": "RegisterSchemaType",
+                "kind": 2097152,
+                "path": "auth/auth.types/type-aliases/RegisterSchemaType.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "LoginSchemaType",
+                "kind": 2097152,
+                "path": "auth/auth.types/type-aliases/LoginSchemaType.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "VerifyEmailSchemaType",
+                "kind": 2097152,
+                "path": "auth/auth.types/type-aliases/VerifyEmailSchemaType.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "VerifyPasswordResetSchemaType",
+                "kind": 2097152,
+                "path": "auth/auth.types/type-aliases/VerifyPasswordResetSchemaType.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "RequestPasswordResetSchemaType",
+                "kind": 2097152,
+                "path": "auth/auth.types/type-aliases/RequestPasswordResetSchemaType.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "AuthFormInputConfig",
+                "kind": 2097152,
+                "path": "auth/auth.types/type-aliases/AuthFormInputConfig.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "auth.utils",
+        "kind": 2,
+        "path": "auth/auth.utils/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Variables",
+            "children": [
+              {
+                "title": "registerFormSchema",
+                "kind": 32,
+                "path": "auth/auth.utils/variables/registerFormSchema.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "loginFormSchema",
+                "kind": 32,
+                "path": "auth/auth.utils/variables/loginFormSchema.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "verifyEmailSchema",
+                "kind": 32,
+                "path": "auth/auth.utils/variables/verifyEmailSchema.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "requestPasswordResetSchema",
+                "kind": 32,
+                "path": "auth/auth.utils/variables/requestPasswordResetSchema.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "verifyPasswordResetSchema",
+                "kind": 32,
+                "path": "auth/auth.utils/variables/verifyPasswordResetSchema.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "getRefreshToken",
+                "kind": 64,
+                "path": "auth/auth.utils/functions/getRefreshToken.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "setRefreshToken",
+                "kind": 64,
+                "path": "auth/auth.utils/functions/setRefreshToken.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "deleteRefreshToken",
+                "kind": 64,
+                "path": "auth/auth.utils/functions/deleteRefreshToken.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "components",
+        "children": [
+          {
+            "title": "AuthFields",
+            "kind": 2,
+            "path": "auth/components/AuthFields/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Interfaces",
+                "children": [
+                  {
+                    "title": "AuthFieldsProps",
+                    "kind": 256,
+                    "path": "auth/components/AuthFields/interfaces/AuthFieldsProps.md",
+                    "isDeprecated": false
+                  }
+                ]
+              },
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/AuthFields/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "AuthForm",
+            "kind": 2,
+            "path": "auth/components/AuthForm/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Interfaces",
+                "children": [
+                  {
+                    "title": "AuthFormProps",
+                    "kind": 256,
+                    "path": "auth/components/AuthForm/interfaces/AuthFormProps.md",
+                    "isDeprecated": false
+                  }
+                ]
+              },
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/AuthForm/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "AuthHeader",
+            "kind": 2,
+            "path": "auth/components/AuthHeader/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Interfaces",
+                "children": [
+                  {
+                    "title": "AuthHeaderProps",
+                    "kind": 256,
+                    "path": "auth/components/AuthHeader/interfaces/AuthHeaderProps.md",
+                    "isDeprecated": false
+                  }
+                ]
+              },
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/AuthHeader/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "AuthHeading",
+            "kind": 2,
+            "path": "auth/components/AuthHeading/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Interfaces",
+                "children": [
+                  {
+                    "title": "AuthHeadingProps",
+                    "kind": 256,
+                    "path": "auth/components/AuthHeading/interfaces/AuthHeadingProps.md",
+                    "isDeprecated": false
+                  }
+                ]
+              },
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/AuthHeading/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "AuthLayout",
+            "kind": 2,
+            "path": "auth/components/AuthLayout/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/AuthLayout/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "RequestPasswordResetForm",
+            "kind": 2,
+            "path": "auth/components/RequestPasswordResetForm/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/RequestPasswordResetForm/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "ResendCode",
+            "kind": 2,
+            "path": "auth/components/ResendCode/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Interfaces",
+                "children": [
+                  {
+                    "title": "ResendCodeButtonProps",
+                    "kind": 256,
+                    "path": "auth/components/ResendCode/interfaces/ResendCodeButtonProps.md",
+                    "isDeprecated": false
+                  }
+                ]
+              },
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/ResendCode/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "VerifyEmailForm",
+            "kind": 2,
+            "path": "auth/components/VerifyEmailForm/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/VerifyEmailForm/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "VerifyPasswordResetForm",
+            "kind": 2,
+            "path": "auth/components/VerifyPasswordResetForm/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "default",
+                    "kind": 64,
+                    "path": "auth/components/VerifyPasswordResetForm/functions/default.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "hooks",
+        "children": [
+          {
+            "title": "useAuthForm",
+            "kind": 2,
+            "path": "auth/hooks/useAuthForm/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "useAuthForm",
+                    "kind": 64,
+                    "path": "auth/hooks/useAuthForm/functions/useAuthForm.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "useAuthFormState",
+            "kind": 2,
+            "path": "auth/hooks/useAuthFormState/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "useAuthFormState",
+                    "kind": 64,
+                    "path": "auth/hooks/useAuthFormState/functions/useAuthFormState.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "useRequestPasswordReset",
+            "kind": 2,
+            "path": "auth/hooks/useRequestPasswordReset/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "useRequestPasswordReset",
+                    "kind": 64,
+                    "path": "auth/hooks/useRequestPasswordReset/functions/useRequestPasswordReset.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "useResendTimer",
+            "kind": 2,
+            "path": "auth/hooks/useResendTimer/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "useResendTimer",
+                    "kind": 64,
+                    "path": "auth/hooks/useResendTimer/functions/useResendTimer.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "useVerifyEmail",
+            "kind": 2,
+            "path": "auth/hooks/useVerifyEmail/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "useVerifyEmail",
+                    "kind": 64,
+                    "path": "auth/hooks/useVerifyEmail/functions/useVerifyEmail.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "useVerifyPasswordReset",
+            "kind": 2,
+            "path": "auth/hooks/useVerifyPasswordReset/README.md",
+            "isDeprecated": false,
+            "children": [
+              {
+                "title": "Functions",
+                "children": [
+                  {
+                    "title": "useVerifyPasswordReset",
+                    "kind": 64,
+                    "path": "auth/hooks/useVerifyPasswordReset/functions/useVerifyPasswordReset.md",
+                    "isDeprecated": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "components",
+    "children": [
+      {
+        "title": "ErrorText",
+        "kind": 2,
+        "path": "components/ErrorText/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Interfaces",
+            "children": [
+              {
+                "title": "ErrorTextProps",
+                "kind": 256,
+                "path": "components/ErrorText/interfaces/ErrorTextProps.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "default",
+                "kind": 64,
+                "path": "components/ErrorText/functions/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "PasswordInput",
+        "kind": 2,
+        "path": "components/PasswordInput/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Interfaces",
+            "children": [
+              {
+                "title": "PasswordInputProps",
+                "kind": 256,
+                "path": "components/PasswordInput/interfaces/PasswordInputProps.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "default",
+                "kind": 64,
+                "path": "components/PasswordInput/functions/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SafeView",
+        "kind": 2,
+        "path": "components/SafeView/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Interfaces",
+            "children": [
+              {
+                "title": "SafeViewProps",
+                "kind": 256,
+                "path": "components/SafeView/interfaces/SafeViewProps.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "default",
+                "kind": 64,
+                "path": "components/SafeView/functions/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "SubmitButton",
+        "kind": 2,
+        "path": "components/SubmitButton/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Interfaces",
+            "children": [
+              {
+                "title": "SubmitButtonProps",
+                "kind": 256,
+                "path": "components/SubmitButton/interfaces/SubmitButtonProps.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "default",
+                "kind": 64,
+                "path": "components/SubmitButton/functions/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "TextInput",
+        "kind": 2,
+        "path": "components/TextInput/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Interfaces",
+            "children": [
+              {
+                "title": "TextInputProps",
+                "kind": 256,
+                "path": "components/TextInput/interfaces/TextInputProps.md",
+                "isDeprecated": false
+              }
+            ]
+          },
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "default",
+                "kind": 64,
+                "path": "components/TextInput/functions/default.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "lib",
+    "children": [
+      {
+        "title": "constants",
+        "kind": 2,
+        "path": "lib/constants/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Variables",
+            "children": [
+              {
+                "title": "BASE_URL",
+                "kind": 32,
+                "path": "lib/constants/variables/BASE_URL.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "API_URL",
+                "kind": 32,
+                "path": "lib/constants/variables/API_URL.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "utils",
+        "kind": 2,
+        "path": "lib/utils/README.md",
+        "isDeprecated": false,
+        "children": [
+          {
+            "title": "Functions",
+            "children": [
+              {
+                "title": "cn",
+                "kind": 64,
+                "path": "lib/utils/functions/cn.md",
+                "isDeprecated": false
+              },
+              {
+                "title": "getFetchOptions",
+                "kind": 64,
+                "path": "lib/utils/functions/getFetchOptions.md",
+                "isDeprecated": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "types",
+    "kind": 2,
+    "path": "types/README.md",
+    "isDeprecated": false,
+    "children": [
+      {
+        "title": "Interfaces",
+        "children": [
+          {
+            "title": "ComponentChildrenProps",
+            "kind": 256,
+            "path": "types/interfaces/ComponentChildrenProps.md",
+            "isDeprecated": false
+          }
+        ]
+      }
+    ]
+  }
+]

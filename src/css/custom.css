@@ -336,3 +336,33 @@ h6,
     padding: 1.25rem;
   }
 }
+.storybook-shell {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.storybook-hero {
+  margin-bottom: 0;
+}
+
+.storybook-frameWrap {
+  overflow: hidden;
+  min-height: 78vh;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.6rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(241, 245, 249, 0.88));
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.08);
+}
+
+.storybook-frame {
+  width: 100%;
+  min-height: 78vh;
+  border: 0;
+  background: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .storybook-frameWrap {
+    border-radius: 1.2rem;
+  }
+}

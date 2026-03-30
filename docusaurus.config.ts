@@ -61,6 +61,16 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
+        {
+          to: '/docs/reference',
+          label: 'API Reference',
+          position: 'left',
+        },
+        {
+          to: '/storybook',
+          label: 'Storybook',
+          position: 'left',
+        },
       ],
     },
     footer: {
@@ -73,14 +83,22 @@ const config: Config = {
               label: 'Introduction',
               to: '/docs/intro',
             },
+            {
+              label: 'API Reference',
+              to: '/docs/reference',
+            },
           ],
         },
         {
-          title: 'Current Scope',
+          title: 'Surfaces',
           items: [
             {
-              label: 'Auth system documentation',
-              to: '/docs/intro',
+              label: 'Storybook',
+              to: '/storybook',
+            },
+            {
+              label: 'Generated contracts',
+              to: '/docs/reference',
             },
           ],
         },

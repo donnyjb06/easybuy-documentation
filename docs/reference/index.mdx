@@ -1,0 +1,43 @@
+---
+title: API Reference
+description: Generated TypeDoc content synced into the EasyBuy docs site.
+slug: /reference
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Integrated Reference</span>
+  <h1>Generated contracts live inside the docs site instead of off to the side.</h1>
+  <p className="doc-summary">
+    This section is synced from the frontend repo's TypeDoc output. Use it when
+    you need the exact prop, hook, type, or service signature. Use the hand-authored
+    pages elsewhere in the docs when you need architecture context and implementation framing.
+  </p>
+  <div className="doc-chip-row">
+    <span className="doc-chip">Generated from <code>vendor/output/reference</code></span>
+    <span className="doc-chip">JSON snapshot included</span>
+    <span className="doc-chip">Storybook at <code>/storybook</code></span>
+  </div>
+</div>
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Browse</span>
+    <h2>Read the generated markdown tree</h2>
+    <p>The nested pages under this section are the generated TypeDoc markdown output copied directly from the frontend repo.</p>
+    <a href="./api">Open the generated API docs</a>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Data</span>
+    <h2>Inspect the JSON snapshot</h2>
+    <p>The raw JSON output is also shipped with the docs site so future tooling can build on the same exported contract graph.</p>
+    <a href="/reference-data/typedoc.json">Open typedoc.json output</a>
+  </div>
+</div>
+
+<div className="doc-callout">
+  <strong>Refresh flow</strong>
+  <p>
+    Run <code>npm run docs:api</code> in <code>C:\Dev\Repos\easybuy-frontend\vendor</code>,
+    then sync the generated output into this repo before rebuilding the site.
+  </p>
+</div>
