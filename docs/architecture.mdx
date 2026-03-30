@@ -1,0 +1,58 @@
+---
+title: Architecture
+description: Provider composition, module boundaries, and the current shell.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Application</span>
+  <h1>The frontend shell is small: a root layout, an auth provider, and a route graph.</h1>
+  <p className="doc-summary">
+    The architecture is intentionally concentrated around the auth surface. The
+    provider stack is narrow, and most behavior fans out from the auth module.
+  </p>
+</div>
+
+<div className="doc-diagram">
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'Inter, sans-serif', 'primaryColor': '#eff6ff', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#2563eb', 'secondaryColor': '#ecfeff', 'tertiaryColor': '#f8fafc', 'lineColor': '#94a3b8' }}}%%
+flowchart TD
+  A["RootLayout"] --> B["AuthProvider"]
+  B --> C["SafeAreaProvider"]
+  C --> D["GluestackUIProvider"]
+  D --> E["Expo Router Stack"]
+  E --> F["Auth routes"]
+  E --> G["Home placeholder route"]
+```
+
+</div>
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Shell</span>
+    <h2>Root layout owns composition, not product logic.</h2>
+    <p>The root layout wires providers and the stack. It is the right place to explain app-level concerns, not feature-level business rules.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Module boundary</span>
+    <h2>The auth folder is the operational center.</h2>
+    <p>Context, service calls, validation schemas, screen hooks, and auth-specific components are intentionally grouped in one feature module.</p>
+  </div>
+</div>
+
+<div className="doc-diagram">
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'Inter, sans-serif', 'primaryColor': '#f8fafc', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#38bdf8', 'secondaryColor': '#eff6ff', 'tertiaryColor': '#ffffff', 'lineColor': '#64748b' }}}%%
+flowchart LR
+  A["Route screens"] --> B["Screen hooks"]
+  B --> C["useAuth()"]
+  C --> D["AuthProvider actions"]
+  D --> E["auth.actions.ts"]
+  E --> F["Backend API"]
+  B --> G["Shared form state"]
+  G --> H["AUTH_FORM_INPUT_CONFIG"]
+  G --> I["Zod schemas"]
+```
+
+</div>

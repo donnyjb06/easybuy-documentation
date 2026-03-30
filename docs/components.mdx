@@ -1,0 +1,54 @@
+---
+title: Components
+description: The shared UI components that matter most in the current scope.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Reference Guide</span>
+  <h1>Document the authored component layer before the primitive layer.</h1>
+  <p className="doc-summary">
+    The first-wave component docs stay focused on shared auth UI and reusable form pieces.
+    Generated primitives are still available in code, but they are intentionally not the center of the docs story.
+  </p>
+</div>
+
+<div className="doc-grid doc-grid--3">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Form input</span>
+    <h2>TextInput</h2>
+    <p>Controlled text input with label and inline validation feedback.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Form input</span>
+    <h2>PasswordInput</h2>
+    <p>Controlled password field with visibility toggle and inline validation feedback.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Action</span>
+    <h2>SubmitButton</h2>
+    <p>Shared loading-aware primary button across auth forms.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Feedback</span>
+    <h2>ErrorText</h2>
+    <p>Conditional error message surface used for validation and global auth errors.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Composition</span>
+    <h2>AuthFields + AuthForm</h2>
+    <p>The config-driven auth composition layer that keeps repeated screens small.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Flow UI</span>
+    <h2>ResendCodeButton</h2>
+    <p>Minimal OTP state surface that flips between cooldown feedback and resend action.</p>
+  </div>
+</div>
+
+<div className="doc-callout">
+  <strong>Initial Storybook targets</strong>
+  <p>
+    TextInput, PasswordInput, SubmitButton, ErrorText, ResendCodeButton,
+    AuthHeader, AuthHeading, and the auth flow forms are the highest-value first pass.
+  </p>
+</div>

@@ -1,0 +1,39 @@
+---
+title: Navigation
+description: The current route graph and how auth routes are grouped.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Application</span>
+  <h1>The current navigation model is route-group based and almost entirely auth-focused.</h1>
+  <p className="doc-summary">
+    Most routes today live under <code>app/(auth)</code>. The home route exists,
+    but it is still a placeholder and should not be treated as a finished product surface.
+  </p>
+</div>
+
+<div className="doc-diagram">
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'Inter, sans-serif', 'primaryColor': '#eef2ff', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#4f46e5', 'secondaryColor': '#ecfeff', 'tertiaryColor': '#ffffff', 'lineColor': '#94a3b8' }}}%%
+flowchart TD
+  A["app/_layout.tsx"] --> B["/"]
+  A --> C["/login"]
+  A --> D["/register"]
+  A --> E["/verify-email"]
+  A --> F["/forgot-password/request-reset"]
+  A --> G["/forgot-password/verify-reset"]
+```
+
+</div>
+
+## Current Routes
+
+| Route | Wrapper file | User-facing purpose |
+| --- | --- | --- |
+| `/login` | `app/(auth)/login.tsx` | Sign in flow |
+| `/register` | `app/(auth)/register.tsx` | Create account flow |
+| `/verify-email` | `app/(auth)/verify-email.tsx` | Submit OTP for email verification |
+| `/forgot-password/request-reset` | `app/(auth)/forgot-password/request-reset.tsx` | Request reset code |
+| `/forgot-password/verify-reset` | `app/(auth)/forgot-password/verify-reset.tsx` | Submit reset code and new password |
+| `/` | `app/index.tsx` | Placeholder home screen |

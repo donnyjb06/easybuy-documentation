@@ -1,0 +1,69 @@
+---
+title: Auth Flow
+description: The current onboarding and recovery flows in the app.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Application</span>
+  <h1>The docs focus on the flows that actually ship today.</h1>
+  <p className="doc-summary">
+    Auth is the center of the current product scope. The flows below reflect the
+    implemented hooks, provider actions, and route transitions that exist in the codebase now.
+  </p>
+</div>
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Onboarding</span>
+    <h2>Login and registration converge on email verification.</h2>
+    <p>Both entry points feed shared form infrastructure and eventually branch on the email verification state.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Recovery</span>
+    <h2>Password reset depends on auth context preserving the email address.</h2>
+    <p>This is a real implementation detail today and should be treated as part of the current flow contract.</p>
+  </div>
+</div>
+
+<div className="doc-diagram">
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'Inter, sans-serif', 'primaryColor': '#eff6ff', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#2563eb', 'secondaryColor': '#f0fdf4', 'tertiaryColor': '#ffffff', 'lineColor': '#94a3b8' }}}%%
+flowchart LR
+  A["AuthForm submit"] --> B["useAuthForm"]
+  B --> C{"Login or register?"}
+  C -->|"Login"| D["login()"]
+  C -->|"Register"| E["register()"]
+  D --> F{"Email verified?"}
+  E --> F
+  F -->|"No"| G["Push /verify-email"]
+  F -->|"Yes"| H["Replace /"]
+```
+
+</div>
+
+<div className="doc-diagram">
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'Inter, sans-serif', 'primaryColor': '#eef2ff', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#7c3aed', 'secondaryColor': '#ecfeff', 'tertiaryColor': '#ffffff', 'lineColor': '#94a3b8' }}}%%
+flowchart TD
+  A["RequestPasswordResetForm"] --> B["sendResetPasswordEmail()"]
+  B --> C["Store email in auth state"]
+  C --> D["Push /forgot-password/verify-reset"]
+  D --> E["VerifyPasswordResetForm"]
+  E --> F["sendVerifyPasswordCode()"]
+  F --> G{"Redirect override?"}
+  G -->|"Yes"| H["Push /request-reset"]
+  G -->|"No"| I["Push /login"]
+```
+
+</div>
+
+<div className="doc-callout">
+  <strong>Clarification notes</strong>
+  <p>
+    Two implementation details are intentionally documented as clarification points today:
+    the email verification resend timer restarts before the resend request finishes, and the
+    reset-verification flow assumes the auth context still contains the email address.
+  </p>
+</div>

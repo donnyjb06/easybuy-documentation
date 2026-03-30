@@ -1,0 +1,73 @@
+---
+title: Overview
+description: The unified documentation map for the EasyBuy frontend.
+slug: /intro
+---
+
+<div className="doc-hero">
+  <span className="doc-kicker">Unified Docs System</span>
+  <h1>One place to understand how the EasyBuy frontend is built.</h1>
+  <p className="doc-summary">
+    This site is designed to connect three surfaces that usually drift apart: the
+    narrative docs, the component explorer, and the generated API reference. The
+    current implementation is intentionally auth-first and reflects what the app
+    actually ships today.
+  </p>
+  <div className="doc-chip-row">
+    <span className="doc-chip">Expo Router</span>
+    <span className="doc-chip">Context API</span>
+    <span className="doc-chip">React Hook Form + Zod</span>
+    <span className="doc-chip">Gluestack UI</span>
+    <span className="doc-chip">Storybook + TypeDoc</span>
+  </div>
+</div>
+
+<div className="doc-grid doc-grid--3">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Foundation</span>
+    <h2>Start with the repo shape, local commands, and stack choices.</h2>
+    <p>
+      Use this path when you need to boot the project, understand the toolchain,
+      or orient yourself around the folder boundaries.
+    </p>
+    <a href="./getting-started">Open the getting started guide</a>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Application</span>
+    <h2>Trace the provider stack, route graph, and auth workflows.</h2>
+    <p>
+      These pages explain how the current auth-first product surface behaves,
+      including what is implemented now versus what is intentionally deferred.
+    </p>
+    <a href="./architecture">Open the application section</a>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Reference Guide</span>
+    <h2>Move from shared UI and hooks into types and service boundaries.</h2>
+    <p>
+      This is the hand-authored bridge that helps the generated reference pages
+      feel useful instead of disconnected from the rest of the site.
+    </p>
+    <a href="./components">Open the reference guide</a>
+  </div>
+</div>
+
+<div className="doc-callout">
+  <strong>Current shipped scope</strong>
+  <p>
+    Login, register, verify email, forgot password, and password-reset
+    verification are the current product surface. OAuth, backend internals,
+    testing strategy, and deployment remain intentionally marked as Coming Soon.
+  </p>
+</div>
+
+<div className="doc-rail">
+  <div>
+    <span className="doc-cardEyebrow">System surfaces</span>
+    <h2>Docusaurus explains. Storybook shows. TypeDoc proves.</h2>
+  </div>
+  <p>
+    The docs site owns the narrative. Storybook focuses on reusable UI states.
+    TypeDoc is generated from the exported contracts in the frontend source.
+  </p>
+</div>

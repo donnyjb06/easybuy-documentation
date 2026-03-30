@@ -1,0 +1,56 @@
+---
+title: Hooks
+description: The custom hooks that orchestrate auth form state and screen behavior.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Reference Guide</span>
+  <h1>The hook layer is where shared form state meets route-level behavior.</h1>
+  <p className="doc-summary">
+    The custom hooks are not generic utilities for the whole app. They are focused,
+    auth-specific orchestration points that sit between the provider and the screen components.
+  </p>
+</div>
+
+<div className="doc-diagram">
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'fontFamily': 'Inter, sans-serif', 'primaryColor': '#eff6ff', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#2563eb', 'secondaryColor': '#f8fafc', 'tertiaryColor': '#ffffff', 'lineColor': '#94a3b8' }}}%%
+flowchart LR
+  A["AuthForm"] --> B["useAuthForm"]
+  B --> C["useAuthFormState"]
+  C --> D["AUTH_FORM_INPUT_CONFIG"]
+  C --> E["Zod schema"]
+  B --> F["useAuth()"]
+  G["VerifyEmailForm"] --> H["useVerifyEmail"]
+  H --> C
+  H --> I["useResendTimer"]
+  J["VerifyPasswordResetForm"] --> K["useVerifyPasswordReset"]
+  K --> C
+  K --> I
+```
+
+</div>
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Shared</span>
+    <h2>useAuthFormState</h2>
+    <p>Builds the reusable React Hook Form plus Zod state that most auth screens depend on.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Shared</span>
+    <h2>useResendTimer</h2>
+    <p>Owns the OTP cooldown window and the helper used to restart it.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Screen</span>
+    <h2>useAuthForm</h2>
+    <p>Handles login and registration submit behavior for the shared auth form shell.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Screen</span>
+    <h2>useVerifyEmail / useVerifyPasswordReset</h2>
+    <p>Drive the OTP-based verification and recovery flows, including resend and redirect logic.</p>
+  </div>
+</div>

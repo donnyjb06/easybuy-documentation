@@ -57,7 +57,7 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
         },
@@ -85,7 +85,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} EasyBuy. Built with Docusaurus.`,
+      copyright: `Copyright (c) ${new Date().getFullYear()} EasyBuy. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

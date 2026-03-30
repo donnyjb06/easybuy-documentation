@@ -1,0 +1,47 @@
+---
+title: Tech Stack
+description: The tools that define the current frontend implementation.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Foundation</span>
+  <h1>The stack is small on purpose and centered on the current auth surface.</h1>
+  <p className="doc-summary">
+    EasyBuy is not documenting a hypothetical full product yet. The current docs
+    stay close to the tools that actively shape login, registration, verification,
+    password recovery, and the shared UI around them.
+  </p>
+</div>
+
+<div className="doc-grid doc-grid--3">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Routing</span>
+    <h2>Expo Router</h2>
+    <p>Route groups under <code>app/(auth)</code> define the current screen graph and the default route wrappers.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">State</span>
+    <h2>Context API</h2>
+    <p><code>AuthProvider</code> holds auth data and the mutation methods used by the auth flows.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Validation</span>
+    <h2>React Hook Form + Zod</h2>
+    <p>The auth forms share a consistent validation and submission model through schema-driven hooks.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">UI</span>
+    <h2>Gluestack UI + NativeWind</h2>
+    <p>Generated primitives sit underneath a smaller set of app-authored shared components.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Component docs</span>
+    <h2>Storybook</h2>
+    <p>Storybook focuses on the shared auth components and the reusable UI states worth reviewing visually.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Reference docs</span>
+    <h2>TypeDoc + Mermaid</h2>
+    <p>Generated API pages come from exported code contracts and can embed diagrams when the code-level explanation needs one.</p>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+---
+title: Getting Started
+description: Local setup, repo boundaries, and the commands that matter.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Foundation</span>
+  <h1>Boot the frontend and the docs system without guesswork.</h1>
+  <p className="doc-summary">
+    The app code lives in one repo and the docs site lives in another. Keeping
+    the boundary explicit makes the generated reference and static Storybook
+    output easier to reason about later.
+  </p>
+</div>
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Frontend repo</span>
+    <h2><code>C:\Dev\Repos\easybuy-frontend\vendor</code></h2>
+    <p>This is the source-of-truth app codebase for Expo Router, auth flows, and shared UI.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Docs repo</span>
+    <h2><code>C:\Dev\Repos\easybuy-documentation</code></h2>
+    <p>This is the Docusaurus shell that will absorb Storybook and TypeDoc into one published surface.</p>
+  </div>
+</div>
+
+## Core Commands
+
+```bash
+# frontend
+cd C:\Dev\Repos\easybuy-frontend\vendor
+npm install
+npm run start
+npm run storybook
+npm run docs:api
+
+# docs site
+cd C:\Dev\Repos\easybuy-documentation
+npm install
+npm run start
+npm run build
+```
+
+<div className="doc-callout">
+  <strong>Required environment variables</strong>
+  <p>
+    The Expo app currently expects <code>EXPO_PUBLIC_BASE_URL</code> and
+    <code> EXPO_PUBLIC_API_URL</code>. The docs site does not need these values,
+    but the generated reference pages describe the constants and helpers that use them.
+  </p>
+</div>
+
+## Startup Checklist
+
+<div className="doc-grid doc-grid--3">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">1</span>
+    <h2>Run the app</h2>
+    <p>Use the Expo commands in the frontend repo to verify the current auth screens and flows.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">2</span>
+    <h2>Inspect components</h2>
+    <p>Use Storybook for shared UI states instead of reading component source in isolation.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">3</span>
+    <h2>Refresh API docs</h2>
+    <p>Run <code>npm run docs:api</code> in the frontend repo whenever exported contracts or comments change.</p>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+---
+title: Screens
+description: The implemented auth screens and the code that powers each one.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Application</span>
+  <h1>The current screen set is intentionally narrow and auth-centered.</h1>
+  <p className="doc-summary">
+    Each route wrapper is thin. The real behavior lives in the form components,
+    screen hooks, and the auth provider methods underneath them.
+  </p>
+</div>
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">/login</span>
+    <h2>Shared auth form in login mode</h2>
+    <p><code>AuthForm</code> + <code>useAuthForm(true)</code> handle sign-in and post-submit routing.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">/register</span>
+    <h2>Shared auth form in register mode</h2>
+    <p><code>AuthForm</code> + <code>useAuthForm(false)</code> handle account creation and verification branching.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">/verify-email</span>
+    <h2>Email verification</h2>
+    <p><code>VerifyEmailForm</code> and <code>useVerifyEmail</code> manage OTP submission, resend, and redirect behavior.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">/forgot-password/request-reset</span>
+    <h2>Reset-code request</h2>
+    <p><code>RequestPasswordResetForm</code> and <code>useRequestPasswordReset</code> manage the email capture step.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">/forgot-password/verify-reset</span>
+    <h2>Password reset verification</h2>
+    <p><code>VerifyPasswordResetForm</code> and <code>useVerifyPasswordReset</code> complete the recovery flow.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">/</span>
+    <h2>Placeholder home</h2>
+    <p>The home route exists in the app shell, but it is still placeholder content and should stay documented that way.</p>
+  </div>
+</div>

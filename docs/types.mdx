@@ -1,0 +1,40 @@
+---
+title: Types
+description: The contracts that define auth state, form values, and config shape.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Reference Guide</span>
+  <h1>The auth types page is really the contract page.</h1>
+  <p className="doc-summary">
+    These types are where the documentation becomes explicit about what the frontend
+    expects from the backend, what form values are validated, and where clarification notes still exist.
+  </p>
+</div>
+
+<div className="doc-grid doc-grid--3">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Context contract</span>
+    <h2>AuthContextType</h2>
+    <p>The public shape of auth state and actions used by screens and hooks.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">State contract</span>
+    <h2>AuthData</h2>
+    <p>The client-held auth snapshot, including the current clarification note around <code>isLoggedIn</code>.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Backend payload</span>
+    <h2>AuthResponse</h2>
+    <p>The response contract used across auth services, including the open role-union clarification.</p>
+  </div>
+</div>
+
+## Type Families
+
+| Family | Examples | Why it matters |
+| --- | --- | --- |
+| Context and state | `AuthContextType`, `AuthData`, `AuthResponse` | Defines the auth boundary and the backend payload shape |
+| Schema-inferred form values | `LoginSchemaType`, `RegisterSchemaType`, `VerifyEmailSchemaType` | Keeps the form value docs aligned with the validation source |
+| Config shape | `AuthFormInputConfig<T>` | Explains how the config-driven auth fields are assembled |
+| External types | `RelativePathString`, `FieldPath`, `Control`, `z.infer` | Should be linked or named, not redefined in local docs |

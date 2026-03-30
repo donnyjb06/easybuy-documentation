@@ -1,0 +1,53 @@
+---
+title: Folder Structure
+description: The folders that matter for the current docs surface.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Foundation</span>
+  <h1>The codebase is easiest to read as route shell, auth module, shared UI, and utilities.</h1>
+  <p className="doc-summary">
+    The docs site mirrors those boundaries instead of flattening everything into
+    one generic component index. That keeps the current auth-first scope readable.
+  </p>
+</div>
+
+```text
+vendor/
+├─ app/
+│  ├─ _layout.tsx
+│  └─ (auth)/
+│     ├─ login.tsx
+│     ├─ register.tsx
+│     ├─ verify-email.tsx
+│     └─ forgot-password/
+├─ auth/
+│  ├─ auth.actions.ts
+│  ├─ auth.provider.tsx
+│  ├─ auth.types.ts
+│  ├─ auth.utils.ts
+│  ├─ components/
+│  └─ hooks/
+├─ components/
+│  ├─ TextInput.tsx
+│  ├─ PasswordInput.tsx
+│  ├─ SubmitButton.tsx
+│  ├─ ErrorText.tsx
+│  └─ SafeView.tsx
+├─ components/ui/
+├─ lib/
+└─ types.ts
+```
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">High-signal folders</span>
+    <h2><code>app</code>, <code>auth</code>, <code>components</code>, and <code>lib</code></h2>
+    <p>These folders define the routes, workflows, reusable UI, and helper boundaries that contributors touch most often.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Implementation detail</span>
+    <h2><code>components/ui</code></h2>
+    <p>The generated primitive layer is important, but it is intentionally secondary to the app-authored components in the first docs pass.</p>
+  </div>
+</div>

@@ -107,3 +107,232 @@ h6,
 :where(.pagination-nav__link, .card) {
   border-radius: 18px;
 }
+
+.doc-hero,
+.doc-card,
+.doc-callout,
+.doc-rail,
+.doc-placeholder,
+.doc-diagram {
+  animation: docRise 520ms ease both;
+}
+
+.doc-hero {
+  position: relative;
+  overflow: hidden;
+  margin: 0 0 1.75rem;
+  padding: 1.7rem 1.8rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.75rem;
+  background:
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.92));
+  box-shadow: 0 28px 80px rgba(15, 23, 42, 0.07);
+}
+
+.doc-hero::after {
+  content: '';
+  position: absolute;
+  inset: auto -10% -45% auto;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.14), transparent 72%);
+  pointer-events: none;
+}
+
+.doc-hero--compact {
+  padding-top: 1.45rem;
+  padding-bottom: 1.45rem;
+}
+
+.doc-kicker,
+.doc-cardEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3554c7;
+}
+
+.doc-summary {
+  max-width: 52rem;
+  margin: 0.85rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.82;
+  color: rgba(15, 23, 42, 0.74);
+}
+
+.doc-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.2rem;
+}
+
+.doc-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: rgba(15, 23, 42, 0.82);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.doc-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0 1.8rem;
+}
+
+.doc-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.doc-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.doc-card {
+  padding: 1.25rem 1.3rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.45rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(241, 245, 249, 0.84));
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(37, 99, 235, 0.18);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.1);
+}
+
+.doc-card h2 {
+  margin: 0.8rem 0 0.65rem;
+  font-size: 1.2rem;
+  line-height: 1.12;
+}
+
+.doc-card p {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.74);
+  line-height: 1.72;
+}
+
+.doc-card a {
+  display: inline-flex;
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.doc-callout,
+.doc-placeholder,
+.doc-rail {
+  margin: 1.3rem 0 1.8rem;
+  padding: 1.2rem 1.3rem;
+  border-radius: 1.4rem;
+}
+
+.doc-callout {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  background: linear-gradient(180deg, rgba(239, 246, 255, 0.9), rgba(248, 250, 252, 0.92));
+}
+
+.doc-rail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.85fr);
+  gap: 1.15rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 120%);
+  color: #eff6ff;
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.14);
+}
+
+.doc-rail h2,
+.doc-rail p,
+.doc-rail .doc-cardEyebrow {
+  color: inherit;
+}
+
+.doc-placeholder {
+  border: 1px dashed rgba(37, 99, 235, 0.25);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.92));
+}
+
+.doc-diagram {
+  margin: 1.4rem 0 1.9rem;
+  padding: 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 250, 252, 0.9));
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.06);
+}
+
+.doc-diagram .theme-mermaid,
+.doc-diagram .mermaid {
+  display: flex;
+  justify-content: center;
+}
+
+.doc-diagram svg {
+  max-width: 100%;
+}
+
+.theme-doc-markdown .doc-hero h1,
+.theme-doc-markdown .doc-placeholder h1 {
+  margin: 0.85rem 0 0;
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+  line-height: 0.96;
+}
+
+.theme-doc-markdown .doc-card code,
+.theme-doc-markdown .doc-callout code,
+.theme-doc-markdown .doc-placeholder code {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+@keyframes docRise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 996px) {
+  .doc-grid--2,
+  .doc-grid--3,
+  .doc-rail {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .doc-hero,
+  .doc-card,
+  .doc-callout,
+  .doc-rail,
+  .doc-placeholder,
+  .doc-diagram {
+    border-radius: 1.2rem;
+  }
+
+  .doc-hero {
+    padding: 1.25rem;
+  }
+}

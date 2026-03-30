@@ -1,0 +1,37 @@
+---
+title: Services
+description: API calls, request helpers, and environment boundaries.
+---
+
+<div className="doc-hero doc-hero--compact">
+  <span className="doc-kicker">Reference Guide</span>
+  <h1>Service docs should describe the request boundary, not just list endpoints.</h1>
+  <p className="doc-summary">
+    The auth service layer is currently concentrated in one module. That makes it
+    easy to document clearly, but it also means the docs should stay explicit about
+    which helpers are API-facing and which ones are just request scaffolding.
+  </p>
+</div>
+
+<div className="doc-grid doc-grid--2">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">API surface</span>
+    <h2><code>auth/auth.actions.ts</code></h2>
+    <p>Holds login, registration, profile lookup, OTP resend, password reset request, and password reset verification.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Request helper</span>
+    <h2><code>lib/utils.ts</code></h2>
+    <p><code>getFetchOptions</code> is the shared fetch helper underneath the auth request layer.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Environment</span>
+    <h2><code>lib/constants.ts</code></h2>
+    <p><code>BASE_URL</code> and <code>API_URL</code> are the environment-facing constants that shape every auth request.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Persistence</span>
+    <h2><code>auth/auth.utils.ts</code></h2>
+    <p>The secure-store token helpers are secondary to the schemas today, but they remain part of the auth support layer.</p>
+  </div>
+</div>
