@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+:root {
+  --ifm-color-primary: #1d4ed8;
+  --ifm-color-primary-dark: #1a46c3;
+  --ifm-color-primary-darker: #1741b7;
+  --ifm-color-primary-darkest: #11328f;
+  --ifm-color-primary-light: #2e5cdd;
+  --ifm-color-primary-lighter: #3e69e1;
+  --ifm-color-primary-lightest: #6286e8;
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.78);
+  --ifm-footer-background-color: #0f172a;
+  --ifm-code-font-size: 94%;
+  --ifm-heading-font-family: 'Space Grotesk', 'Avenir Next', 'Segoe UI', sans-serif;
+  --ifm-font-family-base: 'Inter', 'Segoe UI', sans-serif;
+  --ifm-font-family-monospace: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  --ifm-heading-color: #0f172a;
+  --ifm-link-color: #1d4ed8;
+  --ifm-menu-color: rgba(15, 23, 42, 0.74);
+  --ifm-global-shadow-lw: 0 10px 30px rgba(15, 23, 42, 0.06);
+  --ifm-global-radius: 18px;
+  --docusaurus-highlighted-code-line-bg: rgba(29, 78, 216, 0.08);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #7cb3ff;
+  --ifm-color-primary-dark: #63a4ff;
+  --ifm-color-primary-darker: #579cff;
+  --ifm-color-primary-darkest: #2f7fff;
+  --ifm-color-primary-light: #95c2ff;
+  --ifm-color-primary-lighter: #a1c9ff;
+  --ifm-color-primary-lightest: #c7deff;
+  --ifm-background-color: #060b14;
+  --ifm-navbar-background-color: rgba(6, 11, 20, 0.7);
+  --ifm-footer-background-color: #020611;
+  --ifm-heading-color: #eff6ff;
+  --ifm-menu-color: rgba(226, 232, 240, 0.78);
+  --docusaurus-highlighted-code-line-bg: rgba(124, 179, 255, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ifm-font-family-base);
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero__title {
+  font-family: var(--ifm-heading-font-family);
+  letter-spacing: -0.04em;
+}
+
+.navbar {
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.button {
+  border-radius: 999px;
+}
+
+.theme-doc-markdown header + p,
+.theme-doc-markdown header + div > p,
+.theme-doc-markdown > p:first-of-type {
+  font-size: 1.03rem;
+}
+
+.markdown > hr {
+  border-color: rgba(148, 163, 184, 0.18);
+}
+
+.markdown table {
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+}
+
+.markdown blockquote {
+  border-left: 3px solid rgba(29, 78, 216, 0.45);
+  background: rgba(248, 250, 252, 0.9);
+  border-radius: 0 16px 16px 0;
+  padding: 1rem 1.15rem;
+}
+
+[data-theme='dark'] .markdown blockquote {
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.theme-code-block,
+.prism-code {
+  border-radius: 18px;
+}
+
+:where(.pagination-nav__link, .card) {
+  border-radius: 18px;
+}
