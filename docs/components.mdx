@@ -1,54 +1,66 @@
 ---
 title: Components
-description: The shared UI components that matter most in the current scope.
+description: Authored component guides for the current frontend scope.
 ---
+
+import Link from '@docusaurus/Link';
 
 <div className="doc-hero doc-hero--compact">
   <span className="doc-kicker">Reference Guide</span>
-  <h1>Document the authored component layer before the primitive layer.</h1>
+  <h1>Use the component hub to jump into the authored UI layer.</h1>
   <p className="doc-summary">
-    The first-wave component docs stay focused on shared auth UI and reusable form pieces.
-    Generated primitives are still available in code, but they are intentionally not the center of the docs story.
+    Each card below is a guide entry, not just a label. Open a card to see what the component does,
+    why it exists, how to use it, the main props it takes, and where its type information lives.
   </p>
 </div>
 
 <div className="doc-grid doc-grid--3">
-  <div className="doc-card">
+  <Link className="doc-card doc-card--link" to="/docs/components/text-input">
     <span className="doc-cardEyebrow">Form input</span>
     <h2>TextInput</h2>
-    <p>Controlled text input with label and inline validation feedback.</p>
-  </div>
-  <div className="doc-card">
+    <p>Controlled text input with label, validation feedback, and generated prop reference links.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/components/password-input">
     <span className="doc-cardEyebrow">Form input</span>
     <h2>PasswordInput</h2>
-    <p>Controlled password field with visibility toggle and inline validation feedback.</p>
-  </div>
-  <div className="doc-card">
+    <p>Controlled password field with visibility toggle, inline validation, and shared auth styling.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/components/submit-button">
     <span className="doc-cardEyebrow">Action</span>
     <h2>SubmitButton</h2>
-    <p>Shared loading-aware primary button across auth forms.</p>
-  </div>
-  <div className="doc-card">
+    <p>Shared loading-aware primary action used across the auth forms.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/components/error-text">
     <span className="doc-cardEyebrow">Feedback</span>
     <h2>ErrorText</h2>
-    <p>Conditional error message surface used for validation and global auth errors.</p>
-  </div>
-  <div className="doc-card">
+    <p>Conditional error message surface for validation feedback and auth-level failure states.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/components/auth-fields-auth-form">
     <span className="doc-cardEyebrow">Composition</span>
     <h2>AuthFields + AuthForm</h2>
-    <p>The config-driven auth composition layer that keeps repeated screens small.</p>
-  </div>
-  <div className="doc-card">
+    <p>The config-driven composition layer that turns schemas and field metadata into login and register screens.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/components/resend-code-button">
     <span className="doc-cardEyebrow">Flow UI</span>
     <h2>ResendCodeButton</h2>
-    <p>Minimal OTP state surface that flips between cooldown feedback and resend action.</p>
-  </div>
+    <p>OTP resend state that switches between cooldown feedback and a live resend action.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/components/safeview-auth-layout">
+    <span className="doc-cardEyebrow">Screen shell</span>
+    <h2>SafeView + AuthLayout</h2>
+    <p>The wrappers that create the auth page framing, screen-safe padding, and centered card treatment.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/components/verify-and-recovery-forms">
+    <span className="doc-cardEyebrow">Flow screens</span>
+    <h2>Verify + Recovery Forms</h2>
+    <p>The shipped recovery screens documented as full assemblies rather than isolated leaf components.</p>
+  </Link>
 </div>
 
 <div className="doc-callout">
-  <strong>Initial Storybook targets</strong>
+  <strong>How to read these guides</strong>
   <p>
-    TextInput, PasswordInput, SubmitButton, ErrorText, ResendCodeButton,
-    AuthHeader, AuthHeading, and the auth flow forms are the highest-value first pass.
+    Each page explains what the component is doing, why it exists in the architecture,
+    and how to use it safely before sending you to the generated API reference for exact signatures.
   </p>
 </div>

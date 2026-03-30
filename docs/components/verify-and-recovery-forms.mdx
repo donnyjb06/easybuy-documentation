@@ -1,0 +1,28 @@
+---
+title: Verify And Recovery Forms
+description: Screen-level auth forms for email verification and password recovery.
+---
+
+## What they do
+
+These screen components compose the recovery and verification flows that are currently shipped:
+
+- `RequestPasswordResetForm`
+- `VerifyEmailForm`
+- `VerifyPasswordResetForm`
+
+## Why they exist
+
+These screens are where the shared component layer, the hook layer, and the auth provider meet. They show how the current product scope actually behaves.
+
+## Usage
+
+These are route-level screen components. They do not expose a wide public prop surface. Instead, they depend on the auth context and their matching hook.
+
+## Reference
+
+- `RequestPasswordResetForm`: `/docs/reference/api/auth/components/RequestPasswordResetForm/functions/default`
+- `VerifyEmailForm`: `/docs/reference/api/auth/components/VerifyEmailForm/functions/default`
+- `VerifyPasswordResetForm`: `/docs/reference/api/auth/components/VerifyPasswordResetForm/functions/default`
+- Related hooks: `/docs/hooks`
+

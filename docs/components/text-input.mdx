@@ -1,0 +1,42 @@
+---
+title: TextInput
+description: Controlled text input guide for the shared auth form layer.
+---
+
+## What it does
+
+`TextInput` renders a labeled, React Hook Form-controlled text field with inline validation feedback.
+
+## Why it exists
+
+This component keeps the auth screens from duplicating the same label, field shell, and error handling markup in every form.
+
+## Example
+
+```tsx
+type LoginValues = {
+  email: string;
+};
+
+<TextInput<LoginValues>
+  control={control}
+  name="email"
+  label="Email"
+  placeHolder="janedoe@example.com"
+/>
+```
+
+## Props
+
+| Prop | Type | Notes |
+| --- | --- | --- |
+| `control` | `Control<T>` | React Hook Form control for the current form. |
+| `name` | `FieldPath<T>` | Field name registered in the form state. |
+| `label` | `string` | Upper label rendered above the input. |
+| `placeHolder` | `string` | Placeholder shown while the field is empty. |
+
+## Reference
+
+- Generated API page: `/docs/reference/api/components/TextInput/interfaces/TextInputProps`
+- Related type guide: `/docs/types`
+

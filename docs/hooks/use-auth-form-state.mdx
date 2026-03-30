@@ -1,0 +1,25 @@
+---
+title: useAuthFormState
+description: Shared auth form state hook built on React Hook Form and Zod.
+---
+
+## What it does
+
+`useAuthFormState` creates the shared form controller, validation wiring, local loading state, global error state, and field config lookup for an auth form.
+
+## Why it exists
+
+Most auth screens need the same form plumbing. This hook keeps that wiring in one place so the screen hooks can stay focused on submit behavior.
+
+## Used by
+
+- `useAuthForm`
+- `useRequestPasswordReset`
+- `useVerifyEmail`
+- `useVerifyPasswordReset`
+
+## Reference
+
+- Generated API page: `/docs/reference/api/auth/hooks/useAuthFormState/functions/useAuthFormState`
+- Related type guide: `/docs/types`
+

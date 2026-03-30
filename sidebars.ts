@@ -16,7 +16,38 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Reference Guide',
-      items: ['components', 'hooks', 'types', 'services'],
+      items: [
+        {
+          type: 'category',
+          label: 'Components',
+          items: [
+            'components',
+            'components/text-input',
+            'components/password-input',
+            'components/submit-button',
+            'components/error-text',
+            'components/auth-fields-auth-form',
+            'components/resend-code-button',
+            'components/safeview-auth-layout',
+            'components/verify-and-recovery-forms',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Hooks',
+          items: [
+            'hooks',
+            'hooks/use-auth-form-state',
+            'hooks/use-resend-timer',
+            'hooks/use-auth-form',
+            'hooks/use-request-password-reset',
+            'hooks/use-verify-email',
+            'hooks/use-verify-password-reset',
+          ],
+        },
+        'types',
+        'services',
+      ],
     },
     {
       type: 'category',

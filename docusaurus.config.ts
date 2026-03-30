@@ -60,11 +60,13 @@ const config: Config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
+          activeBaseRegex: '^/docs/(?!reference(?:/|$)).*',
         },
         {
           to: '/docs/reference',
           label: 'API Reference',
           position: 'left',
+          activeBaseRegex: '^/docs/reference(?:/|$)',
         },
         {
           to: '/storybook',

@@ -1,0 +1,21 @@
+---
+title: useVerifyEmail
+description: Email verification screen hook with submit, resend, and timer behavior.
+---
+
+## What it does
+
+`useVerifyEmail` coordinates OTP submission, resend handling, cooldown state, error handling, and redirect behavior for the verify-email screen.
+
+## Why it exists
+
+This flow has enough moving parts that the screen component would become noisy if it owned all of the behavior inline. The hook isolates that orchestration.
+
+## Used by
+
+- `VerifyEmailForm`
+
+## Reference
+
+- Generated API page: `/docs/reference/api/auth/hooks/useVerifyEmail/functions/useVerifyEmail`
+

@@ -1,0 +1,37 @@
+---
+title: SubmitButton
+description: Shared loading-aware submit button for auth flows.
+---
+
+## What it does
+
+`SubmitButton` wraps the shared button styling and flips into a loading state when async form work is in progress.
+
+## Why it exists
+
+The auth screens all need the same primary action behavior. Centralizing that keeps loading and disabled handling consistent.
+
+## Example
+
+```tsx
+<SubmitButton
+  onPress={handleFormSubmit}
+  isDisabled={!isValid || loading}
+  loading={loading}
+  label="Sign in"
+/>
+```
+
+## Props
+
+| Prop | Type | Notes |
+| --- | --- | --- |
+| `loading` | `boolean` | Shows the loading state and loading label. |
+| `label` | `string` | Default button label when not loading. |
+| `...buttonProps` | `Button` props | Pass-through props for the shared button primitive. |
+
+## Reference
+
+- Generated API page: `/docs/reference/api/components/SubmitButton/interfaces/SubmitButtonProps`
+- Related type guide: `/docs/types`
+

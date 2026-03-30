@@ -1,0 +1,42 @@
+---
+title: AuthFields And AuthForm
+description: Config-driven form composition for login and registration.
+---
+
+## What they do
+
+`AuthFields` turns field config into real `TextInput` and `PasswordInput` components. `AuthForm` uses that field layer to assemble the login and registration screens.
+
+## Why they exist
+
+The login and registration screens share enough structure that it is cheaper to keep one composition path than to duplicate both forms separately.
+
+## Example
+
+```tsx
+<AuthFields config={AUTH_FORM_INPUT_CONFIG.login} control={control} />
+
+<AuthForm type="login" />
+```
+
+## Public props
+
+### `AuthFields`
+
+| Prop | Type | Notes |
+| --- | --- | --- |
+| `config` | `AuthFormInputConfig<T>[]` | Ordered field metadata for the current flow. |
+| `control` | `Control<T>` | React Hook Form control used by the child inputs. |
+
+### `AuthForm`
+
+| Prop | Type | Notes |
+| --- | --- | --- |
+| `type` | `"login" \| "register"` | Chooses the shared auth screen variant. |
+
+## Reference
+
+- `AuthFields` props: `/docs/reference/api/auth/components/AuthFields/interfaces/AuthFieldsProps`
+- `AuthForm` props: `/docs/reference/api/auth/components/AuthForm/interfaces/AuthFormProps`
+- Related type guide: `/docs/types`
+

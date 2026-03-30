@@ -1,43 +1,33 @@
-import type {ReactNode} from 'react';
-import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+import {useEffect, type ReactNode} from 'react';
 import Layout from '@theme/Layout';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function StorybookPage(): ReactNode {
   const storybookUrl = useBaseUrl('/storybook-static/index.html');
 
+  useEffect(() => {
+    window.location.replace(storybookUrl);
+  }, [storybookUrl]);
+
   return (
-    <Layout title="Storybook" description="Integrated Storybook surface for EasyBuy shared UI.">
+    <Layout title="Storybook" description="Redirecting to the full Storybook surface.">
       <main className="container margin-vert--lg storybook-shell">
         <section className="doc-hero storybook-hero">
-          <span className="doc-kicker">Integrated Storybook</span>
-          <h1>Shared component states live inside the docs system, not beside it.</h1>
+          <span className="doc-kicker">Storybook</span>
+          <h1>Opening the full Storybook surface.</h1>
           <p className="doc-summary">
-            This page wraps the React Native Web Storybook build from the frontend repo.
-            Use it for visual state review, then move back into the hand-authored docs or generated
-            reference when you need deeper implementation detail.
+            Storybook now opens as its own full-screen surface instead of being embedded inside
+            another iframe. This avoids the blank preview canvas issue in the docs shell.
           </p>
           <div className="doc-chip-row">
-            <span className="doc-chip">Auth-first component surface</span>
+            <span className="doc-chip">Full-screen Storybook</span>
             <span className="doc-chip">Built from frontend source</span>
-            <span className="doc-chip">Static mount inside Docusaurus</span>
+            <span className="doc-chip">Use browser back to return to docs</span>
           </div>
-          <div className="actions" style={{marginTop: '1.4rem'}}>
-            <a className="button button--primary" href={storybookUrl}>
-              Open Storybook in a new tab
-            </a>
-            <Link className="button button--secondary" to="/docs/components">
-              Read the components guide
-            </Link>
-          </div>
-        </section>
-
-        <section className="storybook-frameWrap">
-          <iframe
-            className="storybook-frame"
-            src={storybookUrl}
-            title="EasyBuy Storybook"
-          />
+          <p className="doc-summary">
+            If the redirect does not fire automatically, open{' '}
+            <a href={storybookUrl}>Storybook directly</a>.
+          </p>
         </section>
       </main>
     </Layout>

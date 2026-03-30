@@ -1,0 +1,36 @@
+---
+title: ResendCodeButton
+description: OTP resend control for the verification and recovery flows.
+---
+
+## What it does
+
+`ResendCodeButton` either shows the remaining cooldown time or renders the resend action once the cooldown has expired.
+
+## Why it exists
+
+Verification and recovery screens both need the same resend behavior. This component keeps that state presentation tiny and consistent.
+
+## Example
+
+```tsx
+<ResendCodeButton
+  isRunning={isRunning}
+  seconds={seconds}
+  handleResendCode={handleResendCode}
+/>
+```
+
+## Props
+
+| Prop | Type | Notes |
+| --- | --- | --- |
+| `isRunning` | `boolean` | Whether the cooldown is still active. |
+| `seconds` | `number` | Remaining cooldown seconds. |
+| `handleResendCode` | `() => Promise<void>` | Async resend callback. |
+
+## Reference
+
+- Generated API page: `/docs/reference/api/auth/components/ResendCode/interfaces/ResendCodeButtonProps`
+- Related type guide: `/docs/types`
+

@@ -1,15 +1,14 @@
 ---
 title: Getting Started
-description: Local setup, repo boundaries, and the commands that matter.
+description: Install the frontend prerequisites, run the Expo app in vendor, and then use the docs system around it.
 ---
 
 <div className="doc-hero doc-hero--compact">
   <span className="doc-kicker">Foundation</span>
-  <h1>Boot the frontend and the docs system without guesswork.</h1>
+  <h1>Start the frontend application first, then use the docs system around it.</h1>
   <p className="doc-summary">
-    The app code lives in one repo and the docs site lives in another. Keeping
-    the boundary explicit makes the generated reference and static Storybook
-    output easier to reason about later.
+    The real product code lives in <code>C:\Dev\Repos\easybuy-frontend\vendor</code>.
+    The docs repo exists to explain, visualize, and publish that frontend surface after the app can run locally.
   </p>
 </div>
 
@@ -17,57 +16,109 @@ description: Local setup, repo boundaries, and the commands that matter.
   <div className="doc-card">
     <span className="doc-cardEyebrow">Frontend repo</span>
     <h2><code>C:\Dev\Repos\easybuy-frontend\vendor</code></h2>
-    <p>This is the source-of-truth app codebase for Expo Router, auth flows, and shared UI.</p>
+    <p>This is the Expo Router application you actually develop, run, and test.</p>
   </div>
   <div className="doc-card">
     <span className="doc-cardEyebrow">Docs repo</span>
     <h2><code>C:\Dev\Repos\easybuy-documentation</code></h2>
-    <p>This is the Docusaurus shell that will absorb Storybook and TypeDoc into one published surface.</p>
+    <p>This is the Docusaurus site that pulls in Storybook and TypeDoc outputs from the frontend repo.</p>
   </div>
 </div>
 
-## Core Commands
+## Prerequisites
+
+<div className="doc-grid doc-grid--3">
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Runtime</span>
+    <h2>Node.js LTS</h2>
+    <p>Install the current Node.js LTS release. npm ships with Node, so you do not install npm separately.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">SDK</span>
+    <h2>Expo SDK 54</h2>
+    <p>The current frontend package uses <code>expo ~54.0.33</code>, so local setup should stay aligned with Expo SDK 54.</p>
+  </div>
+  <div className="doc-card">
+    <span className="doc-cardEyebrow">Target</span>
+    <h2>Device or simulator</h2>
+    <p>Use Expo Go on a physical device, or use platform tooling such as Android Studio, Xcode, or the browser build.</p>
+  </div>
+</div>
+
+<div className="doc-callout">
+  <strong>Why this page starts with the app</strong>
+  <p>
+    Storybook and TypeDoc only make sense after the Expo app can install dependencies and boot correctly.
+    If <code>vendor</code> cannot run, the rest of the docs system is secondary.
+  </p>
+</div>
+
+## Install And Run The Frontend
 
 ```bash
-# frontend
 cd C:\Dev\Repos\easybuy-frontend\vendor
 npm install
-npm run start
-npm run storybook
-npm run docs:api
-
-# docs site
-cd C:\Dev\Repos\easybuy-documentation
-npm install
-npm run start
-npm run build
+npm start
 ```
+
+Once the Expo dev server is running:
+
+- press <code>w</code> for the web build
+- press <code>a</code> for Android
+- press <code>i</code> for iOS on macOS
+- or scan the QR code in Expo Go on a physical device
+
+You can also use the explicit scripts:
+
+```bash
+cd C:\Dev\Repos\easybuy-frontend\vendor
+npm run web
+npm run android
+npm run ios
+```
+
+## Frontend Environment Variables
 
 <div className="doc-callout">
   <strong>Required environment variables</strong>
   <p>
-    The Expo app currently expects <code>EXPO_PUBLIC_BASE_URL</code> and
-    <code> EXPO_PUBLIC_API_URL</code>. The docs site does not need these values,
-    but the generated reference pages describe the constants and helpers that use them.
+    The frontend reads <code>EXPO_PUBLIC_BASE_URL</code> and <code>EXPO_PUBLIC_API_URL</code>.
+    The docs repo does not need those values, but the running Expo app does.
   </p>
 </div>
 
-## Startup Checklist
+## Docs Workflow After The App Runs
+
+```bash
+# Storybook source and static build
+cd C:\Dev\Repos\easybuy-frontend\vendor
+npm run storybook
+npm run build-storybook
+
+# API reference generation
+cd C:\Dev\Repos\easybuy-frontend\vendor
+npm run docs:api
+
+# Docs site
+cd C:\Dev\Repos\easybuy-documentation
+npm install
+npm start
+```
 
 <div className="doc-grid doc-grid--3">
   <div className="doc-card">
     <span className="doc-cardEyebrow">1</span>
     <h2>Run the app</h2>
-    <p>Use the Expo commands in the frontend repo to verify the current auth screens and flows.</p>
+    <p>Verify the current auth-first product scope inside the Expo app in <code>vendor</code>.</p>
   </div>
   <div className="doc-card">
     <span className="doc-cardEyebrow">2</span>
-    <h2>Inspect components</h2>
-    <p>Use Storybook for shared UI states instead of reading component source in isolation.</p>
+    <h2>Review UI states</h2>
+    <p>Use Storybook for component and screen composition states that are faster to review visually than in code.</p>
   </div>
   <div className="doc-card">
     <span className="doc-cardEyebrow">3</span>
-    <h2>Refresh API docs</h2>
-    <p>Run <code>npm run docs:api</code> in the frontend repo whenever exported contracts or comments change.</p>
+    <h2>Refresh generated docs</h2>
+    <p>Regenerate Storybook and TypeDoc from the frontend repo when component contracts or auth behavior change.</p>
   </div>
 </div>

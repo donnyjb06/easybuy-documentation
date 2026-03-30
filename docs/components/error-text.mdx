@@ -1,0 +1,32 @@
+---
+title: ErrorText
+description: Shared conditional error message surface.
+---
+
+## What it does
+
+`ErrorText` renders a styled error message only when the calling form or screen says the error should be visible.
+
+## Why it exists
+
+It gives the auth flows one consistent error surface for both field-level validation and higher-level auth failures.
+
+## Example
+
+```tsx
+<ErrorText isShown={!!globalError} label={globalError} />
+```
+
+## Props
+
+| Prop | Type | Notes |
+| --- | --- | --- |
+| `isShown` | `boolean` | Controls whether anything renders. |
+| `label` | `string \| null \| undefined` | Error copy to render when visible. |
+| `...textProps` | `Text` props | Pass-through styling and layout props. |
+
+## Reference
+
+- Generated API page: `/docs/reference/api/components/ErrorText/interfaces/ErrorTextProps`
+- Related type guide: `/docs/types`
+

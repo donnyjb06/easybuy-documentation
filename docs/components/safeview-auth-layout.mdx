@@ -1,0 +1,40 @@
+---
+title: SafeView And AuthLayout
+description: Shared wrappers that define the auth screen shell.
+---
+
+## What they do
+
+`SafeView` owns the safe-area layout and ambient gradient treatment. `AuthLayout` uses `SafeView` to center the auth card and handle scroll behavior for the current screen flows.
+
+## Why they exist
+
+These wrappers let the auth screens stay focused on product content instead of rebuilding the same page shell in every screen component.
+
+## Example
+
+```tsx
+<AuthLayout>
+  <AuthHeading label="Recover your password" className="text-center" />
+</AuthLayout>
+```
+
+## Public props
+
+### `SafeView`
+
+| Prop | Type | Notes |
+| --- | --- | --- |
+| `children` | `ReactNode` | Child screen content. |
+| `className` | `string` | Optional inner safe-area utility classes. |
+
+### `AuthLayout`
+
+`AuthLayout` takes `children` only.
+
+## Reference
+
+- `SafeView` props: `/docs/reference/api/components/SafeView/interfaces/SafeViewProps`
+- `AuthLayout` function: `/docs/reference/api/auth/components/AuthLayout/functions/default`
+- Related type guide: `/docs/types`
+

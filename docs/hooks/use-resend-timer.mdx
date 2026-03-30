@@ -1,0 +1,22 @@
+---
+title: useResendTimer
+description: Shared cooldown timer for OTP resend flows.
+---
+
+## What it does
+
+`useResendTimer` manages the resend countdown, exposes the remaining seconds, and provides the helper used to restart the timer after a resend.
+
+## Why it exists
+
+Both verification and password recovery need the same cooldown behavior. This hook prevents timer logic from being duplicated inside two separate screen hooks.
+
+## Used by
+
+- `useVerifyEmail`
+- `useVerifyPasswordReset`
+
+## Reference
+
+- Generated API page: `/docs/reference/api/auth/hooks/useResendTimer/functions/useResendTimer`
+

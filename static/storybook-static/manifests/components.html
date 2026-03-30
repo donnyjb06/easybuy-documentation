@@ -576,13 +576,13 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><span class="filter-pill ok" aria-disabled="true">5 components ok</span><a class="filter-pill info" data-k="infos" href="#filter-infos">5/5 infos</a><span class="filter-pill ok" aria-disabled="true">11 stories ok</span><a class="filter-pill ok" data-k="docs" href="#filter-docs">1 doc ok</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><a class="filter-pill err" data-k="errors" href="#filter-errors">3/14 prop type errors</a><a class="filter-pill info" data-k="infos" href="#filter-infos">4/14 infos</a><a class="filter-pill err" data-k="story-errors" href="#filter-story-errors">7/26 story errors</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">1 doc ok</a></div>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div class="note info" style="margin-bottom: 16px;">
-            <strong>Tip:</strong> You are using <code>react-docgen</code> (the default). Generation took <strong>0.5s</strong>. For higher quality prop types, consider switching to <code>react-docgen-typescript</code> in your <code>main.ts</code>:
+            <strong>Tip:</strong> You are using <code>react-docgen</code> (the default). Generation took <strong>8.3s</strong>. For higher quality prop types, consider switching to <code>react-docgen-typescript</code> in your <code>main.ts</code>:
             <pre><code>typescript: {
   reactDocgen: 'react-docgen-typescript',
 }</code></pre>
@@ -595,7 +595,92 @@
 <article
   class="card 
   no-error 
-  has-info 
+  no-info 
+  no-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="AuthForm">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-ok"></span> AuthForm</h2>
+      <div class="badges">
+        <label for="c-0-auth-authform-props" class="badge ok as-toggle">1 prop type</label>
+        
+        <label for="c-0-auth-authform-stories" class="badge ok as-toggle">2 stories</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/AuthForm.stories.tsx">auth-authform · ./stories/AuthForm.stories.tsx</div>
+    
+    <div class="hint">Renders the shared auth screen used by the login and registration routes.</div>
+    <div class="kv"><span class="chip">param: props - Determines which auth flow content and behavior to render.</span><span class="chip">returns: The composed auth screen for login or registration.</span></div>
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-0-auth-authform-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  <input id="c-0-auth-authform-props" class="tg tg-props" type="checkbox" hidden />
+
+  <div class="panels">
+    
+    
+    
+        <div class="panel panel-props">
+          <div class="note ok">
+            <div class="row">
+              <span class="ex-name">Prop types <small>(react-docgen)</small></span>
+              <span class="badge ok">1 prop type</span>
+            </div>
+            <pre><code>Component: auth\components\AuthForm.tsx::default</code></pre>
+            <pre><code>Props:</code></pre>
+            <pre><code>/**
+ * Selects whether the shared form renders the login or register flow.
+ */
+type: &quot;login&quot; | &quot;register&quot;</code></pre>
+          </div>
+        </div>
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { AuthForm, StorybookAuthProvider } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Login</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Login = () =&gt; &lt;AuthForm type=&quot;login&quot; /&gt;;</code></pre>
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Register</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Register = () =&gt; &lt;AuthForm type=&quot;register&quot; /&gt;;</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  no-error 
+  no-info 
   no-story-error
   no-doc-error"
   role="listitem"
@@ -604,35 +689,28 @@
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> AuthHeader</h2>
       <div class="badges">
-        <label for="c-0-auth-authheader-props" class="badge ok as-toggle">2 prop types</label>
-        <label for="c-0-auth-authheader-info" class="badge info as-toggle">1 info</label>
-        <label for="c-0-auth-authheader-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-1-auth-authheader-props" class="badge ok as-toggle">2 prop types</label>
+        
+        <label for="c-1-auth-authheader-stories" class="badge ok as-toggle">2 stories</label>
         
       </div>
     </div>
     <div class="meta" title="./stories/AuthHeader.stories.tsx">auth-authheader · ./stories/AuthHeader.stories.tsx</div>
     
-    
-    
+    <div class="hint">Renders the shared header used by the login and registration screens.</div>
+    <div class="kv"><span class="chip">param: props - Heading and supporting copy for the auth header.</span><span class="chip">returns: The auth header with a social sign-in placeholder and copy.</span></div>
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-0-auth-authheader-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-0-auth-authheader-stories" class="tg tg-stories" type="checkbox" hidden />
   
-  <input id="c-0-auth-authheader-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-1-auth-authheader-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  <input id="c-1-auth-authheader-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
     
-        <div class="panel panel-info">
-          
-    <div class="note info">
-      <div class="note-title">Info</div>
-      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
-    </div>
-        </div>
     
         <div class="panel panel-props">
           <div class="note ok">
@@ -642,8 +720,14 @@
             </div>
             <pre><code>Component: auth\components\AuthHeader.tsx::default</code></pre>
             <pre><code>Props:</code></pre>
-            <pre><code>emailPrompt: string
+            <pre><code>/**
+ * Supporting copy shown above the email form fields.
+ */
+emailPrompt: string
 
+/**
+ * Primary heading rendered at the top of the auth screen.
+ */
 heading: string</code></pre>
           </div>
         </div>
@@ -686,7 +770,7 @@ import { View } from "react-native";</code></pre>
 <article
   class="card 
   no-error 
-  has-info 
+  no-info 
   no-story-error
   no-doc-error"
   role="listitem"
@@ -695,35 +779,28 @@ import { View } from "react-native";</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> AuthHeading</h2>
       <div class="badges">
-        <label for="c-1-auth-authheading-props" class="badge ok as-toggle">1 prop type</label>
-        <label for="c-1-auth-authheading-info" class="badge info as-toggle">1 info</label>
-        <label for="c-1-auth-authheading-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-2-auth-authheading-props" class="badge ok as-toggle">1 prop type</label>
+        
+        <label for="c-2-auth-authheading-stories" class="badge ok as-toggle">2 stories</label>
         
       </div>
     </div>
     <div class="meta" title="./stories/AuthHeading.stories.tsx">auth-authheading · ./stories/AuthHeading.stories.tsx</div>
     
-    
-    
+    <div class="hint">Renders the shared large-format heading used across auth screens.</div>
+    <div class="kv"><span class="chip">param: props - Label text plus passthrough text props.</span><span class="chip">returns: A styled auth heading.</span></div>
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-1-auth-authheading-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-1-auth-authheading-stories" class="tg tg-stories" type="checkbox" hidden />
   
-  <input id="c-1-auth-authheading-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-2-auth-authheading-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  <input id="c-2-auth-authheading-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
     
-        <div class="panel panel-info">
-          
-    <div class="note info">
-      <div class="note-title">Info</div>
-      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
-    </div>
-        </div>
     
         <div class="panel panel-props">
           <div class="note ok">
@@ -733,7 +810,10 @@ import { View } from "react-native";</code></pre>
             </div>
             <pre><code>Component: auth\components\AuthHeading.tsx::default</code></pre>
             <pre><code>Props:</code></pre>
-            <pre><code>label: string</code></pre>
+            <pre><code>/**
+ * Heading text rendered by the component.
+ */
+label: string</code></pre>
           </div>
         </div>
     
@@ -779,18 +859,18 @@ import { View } from "react-native";</code></pre>
   no-story-error
   no-doc-error"
   role="listitem"
-  aria-label="ErrorText">
+  aria-label="AuthLayout">
   <div class="head">
     <div class="title">
-      <h2><span class="status-dot dot-ok"></span> ErrorText</h2>
+      <h2><span class="status-dot dot-ok"></span> AuthLayout</h2>
       <div class="badges">
-        <label for="c-2-shared-errortext-props" class="badge ok as-toggle">2 prop types</label>
-        <label for="c-2-shared-errortext-info" class="badge info as-toggle">1 info</label>
-        <label for="c-2-shared-errortext-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-3-auth-authlayout-props" class="badge ok as-toggle">1 prop type</label>
+        <label for="c-3-auth-authlayout-info" class="badge info as-toggle">1 info</label>
+        <label for="c-3-auth-authlayout-stories" class="badge ok as-toggle">1 story</label>
         
       </div>
     </div>
-    <div class="meta" title="./stories/ErrorText.stories.tsx">shared-errortext · ./stories/ErrorText.stories.tsx</div>
+    <div class="meta" title="./stories/AuthLayout.stories.tsx">auth-authlayout · ./stories/AuthLayout.stories.tsx</div>
     
     
     
@@ -798,10 +878,10 @@ import { View } from "react-native";</code></pre>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-2-shared-errortext-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-2-shared-errortext-stories" class="tg tg-stories" type="checkbox" hidden />
+  <input id="c-3-auth-authlayout-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-3-auth-authlayout-stories" class="tg tg-stories" type="checkbox" hidden />
   
-  <input id="c-2-shared-errortext-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-3-auth-authlayout-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
@@ -818,12 +898,477 @@ import { View } from "react-native";</code></pre>
           <div class="note ok">
             <div class="row">
               <span class="ex-name">Prop types <small>(react-docgen)</small></span>
+              <span class="badge ok">1 prop type</span>
+            </div>
+            <pre><code>Component: auth\components\AuthLayout.tsx::default</code></pre>
+            <pre><code>Props:</code></pre>
+            <pre><code>children: React.ReactNode</code></pre>
+          </div>
+        </div>
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { AuthHeading, AuthLayout, Text } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Default</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Default = () =&gt; (
+  &lt;View style={{ width: 420, height: 760 }}&gt;
+    &lt;AuthLayout&gt;
+      &lt;View style={{ gap: 20 }}&gt;
+        &lt;AuthHeading className=&quot;text-center&quot; label=&quot;Layout container&quot; /&gt;
+        &lt;Text className=&quot;text-center leading-6 text-muted-foreground&quot;&gt;
+          The auth layout centers a single form card inside the shared safe
+          screen wrapper.
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/AuthLayout&gt;
+  &lt;/View&gt;
+);</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  has-error 
+  has-info 
+  has-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="DemoField">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> DemoField</h2>
+      <div class="badges">
+        <label for="c-4-shared-passwordinput-err" class="badge err as-toggle">prop type error</label>
+        <label for="c-4-shared-passwordinput-info" class="badge info as-toggle">1 info</label>
+        <label for="c-4-shared-passwordinput-stories" class="badge err as-toggle">3/3 story errors</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/PasswordInput.stories.tsx">shared-passwordinput · ./stories/PasswordInput.stories.tsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-4-shared-passwordinput-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-4-shared-passwordinput-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-4-shared-passwordinput-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">Prop type error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;DemoField&quot; component.
+  41 | };
+  42 |
+&gt; 43 | const meta = {
+     | ^
+  44 |   title: &quot;Shared/PasswordInput&quot;,
+  45 |   component: DemoField,
+  46 |   tags: [&quot;autodocs&quot;],
+
+./stories/PasswordInput.stories.tsx:
+import type { Meta, StoryObj } from &quot;@storybook/react-native-web-vite&quot;;
+import { useEffect } from &quot;react&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import PasswordInput from &quot;@/components/PasswordInput&quot;;
+
+type DemoValues = {
+  password: string;
+};
+
+const DemoField = ({
+  showError = false,
+  defaultValue = &quot;&quot;,
+}: {
+  showError?: boolean;
+  defaultValue?: string;
+}) =&gt; {
+  const methods = useForm&lt;DemoValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: { password: defaultValue },
+  });
+
+  useEffect(() =&gt; {
+    if (!showError) {
+      return;
+    }
+
+    methods.setError(&quot;password&quot;, {
+      type: &quot;manual&quot;,
+      message: &quot;Password must be at least 8 characters.&quot;,
+    });
+  }, [methods, showError]);
+
+  return (
+    &lt;PasswordInput&lt;DemoValues&gt;
+      control={methods.control}
+      name=&quot;password&quot;
+      label=&quot;Password&quot;
+      placeHolder=&quot;Enter your password&quot;
+    /&gt;
+  );
+};
+
+const meta = {
+  title: &quot;Shared/PasswordInput&quot;,
+  component: DemoField,
+  tags: [&quot;autodocs&quot;],
+  decorators: [
+    (Story) =&gt; (
+      &lt;div style={{ width: 360 }}&gt;
+        &lt;Story /&gt;
+      &lt;/div&gt;
+    ),
+  ],
+  args: {
+    showError: false,
+    defaultValue: &quot;&quot;,
+  },
+} satisfies Meta&lt;typeof DemoField&gt;;
+
+export default meta;
+
+type Story = StoryObj&lt;typeof meta&gt;;
+
+export const Empty: Story = {};
+
+export const Filled: Story = {
+  args: {
+    defaultValue: &quot;password123&quot;,
+  },
+};
+
+export const Invalid: Story = {
+  args: {
+    showError: true,
+    defaultValue: &quot;short&quot;,
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Empty</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Filled</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Invalid</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { PasswordInput } from "vendor";</code></pre>
+              </div>
+          
+          
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  has-error 
+  has-info 
+  has-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="DemoField">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> DemoField</h2>
+      <div class="badges">
+        <label for="c-5-shared-textinput-err" class="badge err as-toggle">prop type error</label>
+        <label for="c-5-shared-textinput-info" class="badge info as-toggle">1 info</label>
+        <label for="c-5-shared-textinput-stories" class="badge err as-toggle">3/3 story errors</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/TextInput.stories.tsx">shared-textinput · ./stories/TextInput.stories.tsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-5-shared-textinput-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-5-shared-textinput-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-5-shared-textinput-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">Prop type error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;DemoField&quot; component.
+  41 | };
+  42 |
+&gt; 43 | const meta = {
+     | ^
+  44 |   title: &quot;Shared/TextInput&quot;,
+  45 |   component: DemoField,
+  46 |   tags: [&quot;autodocs&quot;],
+
+./stories/TextInput.stories.tsx:
+import type { Meta, StoryObj } from &quot;@storybook/react-native-web-vite&quot;;
+import { useEffect } from &quot;react&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import TextInput from &quot;@/components/TextInput&quot;;
+
+type DemoValues = {
+  email: string;
+};
+
+const DemoField = ({
+  showError = false,
+  defaultValue = &quot;&quot;,
+}: {
+  showError?: boolean;
+  defaultValue?: string;
+}) =&gt; {
+  const methods = useForm&lt;DemoValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: { email: defaultValue },
+  });
+
+  useEffect(() =&gt; {
+    if (!showError) {
+      return;
+    }
+
+    methods.setError(&quot;email&quot;, {
+      type: &quot;manual&quot;,
+      message: &quot;Enter a valid email address.&quot;,
+    });
+  }, [methods, showError]);
+
+  return (
+    &lt;TextInput&lt;DemoValues&gt;
+      control={methods.control}
+      name=&quot;email&quot;
+      label=&quot;Email&quot;
+      placeHolder=&quot;janedoe@example.com&quot;
+    /&gt;
+  );
+};
+
+const meta = {
+  title: &quot;Shared/TextInput&quot;,
+  component: DemoField,
+  tags: [&quot;autodocs&quot;],
+  decorators: [
+    (Story) =&gt; (
+      &lt;div style={{ width: 360 }}&gt;
+        &lt;Story /&gt;
+      &lt;/div&gt;
+    ),
+  ],
+  args: {
+    showError: false,
+    defaultValue: &quot;&quot;,
+  },
+  argTypes: {
+    showError: {
+      control: &quot;boolean&quot;,
+    },
+    defaultValue: {
+      control: &quot;text&quot;,
+    },
+  },
+} satisfies Meta&lt;typeof DemoField&gt;;
+
+export default meta;
+
+type Story = StoryObj&lt;typeof meta&gt;;
+
+export const Empty: Story = {};
+
+export const Filled: Story = {
+  args: {
+    defaultValue: &quot;jane@example.com&quot;,
+  },
+};
+
+export const Invalid: Story = {
+  args: {
+    showError: true,
+    defaultValue: &quot;jane@&quot;,
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Empty</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Filled</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Invalid</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { TextInput } from "vendor";</code></pre>
+              </div>
+          
+          
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  no-error 
+  no-info 
+  no-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="ErrorText">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-ok"></span> ErrorText</h2>
+      <div class="badges">
+        <label for="c-6-shared-errortext-props" class="badge ok as-toggle">2 prop types</label>
+        
+        <label for="c-6-shared-errortext-stories" class="badge ok as-toggle">2 stories</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/ErrorText.stories.tsx">shared-errortext · ./stories/ErrorText.stories.tsx</div>
+    
+    <div class="hint">Conditionally renders styled error text.</div>
+    <div class="kv"><span class="chip">param: props - Visibility flag, message content, and passthrough text props.</span><span class="chip">returns: The styled error message when visible; otherwise nothing.</span></div>
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-6-shared-errortext-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  <input id="c-6-shared-errortext-props" class="tg tg-props" type="checkbox" hidden />
+
+  <div class="panels">
+    
+    
+    
+        <div class="panel panel-props">
+          <div class="note ok">
+            <div class="row">
+              <span class="ex-name">Prop types <small>(react-docgen)</small></span>
               <span class="badge ok">2 prop types</span>
             </div>
             <pre><code>Component: components\ErrorText.tsx::default</code></pre>
             <pre><code>Props:</code></pre>
-            <pre><code>isShown: boolean
+            <pre><code>/**
+ * Controls whether the error message should be rendered.
+ */
+isShown: boolean
 
+/**
+ * Error message to render when `isShown` is true.
+ */
 label?: string | null</code></pre>
           </div>
         </div>
@@ -865,37 +1410,125 @@ import { View } from "react-native";</code></pre>
 </article>
 <article
   class="card 
-  no-error 
+  has-error 
   has-info 
-  no-story-error
+  has-story-error
   no-doc-error"
   role="listitem"
-  aria-label="ResendCodeButton">
+  aria-label="LoginFieldsDemo">
   <div class="head">
     <div class="title">
-      <h2><span class="status-dot dot-ok"></span> ResendCodeButton</h2>
+      <h2><span class="status-dot dot-err"></span> LoginFieldsDemo</h2>
       <div class="badges">
-        <label for="c-3-auth-resendcodebutton-props" class="badge ok as-toggle">3 prop types</label>
-        <label for="c-3-auth-resendcodebutton-info" class="badge info as-toggle">1 info</label>
-        <label for="c-3-auth-resendcodebutton-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-7-auth-authfields-err" class="badge err as-toggle">prop type error</label>
+        <label for="c-7-auth-authfields-info" class="badge info as-toggle">1 info</label>
+        <label for="c-7-auth-authfields-stories" class="badge err as-toggle">1/2 story errors</label>
         
       </div>
     </div>
-    <div class="meta" title="./stories/ResendCodeButton.stories.tsx">auth-resendcodebutton · ./stories/ResendCodeButton.stories.tsx</div>
+    <div class="meta" title="./stories/AuthFields.stories.tsx">auth-authfields · ./stories/AuthFields.stories.tsx</div>
     
     
     
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-7-auth-authfields-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-7-auth-authfields-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-7-auth-authfields-stories" class="tg tg-stories" type="checkbox" hidden />
   
-  <input id="c-3-auth-resendcodebutton-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-3-auth-resendcodebutton-stories" class="tg tg-stories" type="checkbox" hidden />
   
-  <input id="c-3-auth-resendcodebutton-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">Prop type error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;LoginFieldsDemo&quot; component.
+  55 | };
+  56 |
+&gt; 57 | const meta = {
+     | ^
+  58 |   title: &quot;Auth/AuthFields&quot;,
+  59 |   component: LoginFieldsDemo,
+  60 |   tags: [&quot;autodocs&quot;],
+
+./stories/AuthFields.stories.tsx:
+import type { Meta, StoryObj } from &quot;@storybook/react-native-web-vite&quot;;
+import AuthFields from &quot;@/auth/components/AuthFields&quot;;
+import { AUTH_FORM_INPUT_CONFIG } from &quot;@/auth/auth.constants&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import { View } from &quot;react-native&quot;;
+
+type LoginValues = {
+  email: string;
+  password: string;
+};
+
+type ResetValues = {
+  otpCode: string;
+  password: string;
+  confirmPassword: string;
+};
+
+const LoginFieldsDemo = () =&gt; {
+  const methods = useForm&lt;LoginValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: {
+      email: &quot;&quot;,
+      password: &quot;&quot;,
+    },
+  });
+
+  return (
+    &lt;View style={{ width: 360, gap: 16 }}&gt;
+      &lt;AuthFields&lt;LoginValues&gt;
+        control={methods.control}
+        config={AUTH_FORM_INPUT_CONFIG.login}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const ResetFieldsDemo = () =&gt; {
+  const methods = useForm&lt;ResetValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: {
+      otpCode: &quot;&quot;,
+      password: &quot;&quot;,
+      confirmPassword: &quot;&quot;,
+    },
+  });
+
+  return (
+    &lt;View style={{ width: 360, gap: 16 }}&gt;
+      &lt;AuthFields&lt;ResetValues&gt;
+        control={methods.control}
+        config={AUTH_FORM_INPUT_CONFIG.verifyPasswordReset}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const meta = {
+  title: &quot;Auth/AuthFields&quot;,
+  component: LoginFieldsDemo,
+  tags: [&quot;autodocs&quot;],
+} satisfies Meta&lt;typeof LoginFieldsDemo&gt;;
+
+export default meta;
+
+type Story = StoryObj&lt;typeof meta&gt;;
+
+export const LoginConfig: Story = {};
+
+export const ResetConfig: Story = {
+  render: () =&gt; &lt;ResetFieldsDemo /&gt;,
+};
+</code></pre></div>
+    </div>
+        </div>
     
         <div class="panel panel-info">
           
@@ -905,6 +1538,140 @@ import { View } from "react-native";</code></pre>
     </div>
         </div>
     
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Login Config</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { AuthFields } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Reset Config</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const ResetConfig = () =&gt; &lt;ResetFieldsDemo /&gt;;</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  no-error 
+  no-info 
+  no-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="RequestPasswordResetForm">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-ok"></span> RequestPasswordResetForm</h2>
+      <div class="badges">
+        
+        
+        <label for="c-8-auth-requestpasswordresetform-stories" class="badge ok as-toggle">1 story</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/RequestPasswordResetForm.stories.tsx">auth-requestpasswordresetform · ./stories/RequestPasswordResetForm.stories.tsx</div>
+    
+    <div class="hint">Renders the password reset request screen.</div>
+    <div class="kv"><span class="chip">returns: The composed request-reset form screen.</span></div>
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-8-auth-requestpasswordresetform-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+    
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { RequestPasswordResetForm, StorybookAuthProvider } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Default</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Default = () =&gt; &lt;RequestPasswordResetForm /&gt;;</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  no-error 
+  no-info 
+  no-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="ResendCodeButton">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-ok"></span> ResendCodeButton</h2>
+      <div class="badges">
+        <label for="c-9-auth-resendcodebutton-props" class="badge ok as-toggle">3 prop types</label>
+        
+        <label for="c-9-auth-resendcodebutton-stories" class="badge ok as-toggle">2 stories</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/ResendCodeButton.stories.tsx">auth-resendcodebutton · ./stories/ResendCodeButton.stories.tsx</div>
+    
+    <div class="hint">Renders either the resend cooldown text or the resend action button.</div>
+    <div class="kv"><span class="chip">param: props - Timer state and resend callback for the OTP flow.</span><span class="chip">returns: Cooldown feedback while running, otherwise a resend button.</span></div>
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-9-auth-resendcodebutton-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  <input id="c-9-auth-resendcodebutton-props" class="tg tg-props" type="checkbox" hidden />
+
+  <div class="panels">
+    
+    
+    
         <div class="panel panel-props">
           <div class="note ok">
             <div class="row">
@@ -913,10 +1680,19 @@ import { View } from "react-native";</code></pre>
             </div>
             <pre><code>Component: auth\components\ResendCode.tsx::default</code></pre>
             <pre><code>Props:</code></pre>
-            <pre><code>handleResendCode: () =&gt; Promise&lt;void&gt;
+            <pre><code>/**
+ * Callback fired when the user requests a new OTP code.
+ */
+handleResendCode: () =&gt; Promise&lt;void&gt;
 
+/**
+ * Indicates whether the cooldown timer is still active.
+ */
 isRunning: boolean
 
+/**
+ * Remaining seconds in the resend cooldown.
+ */
 seconds: number</code></pre>
           </div>
         </div>
@@ -958,7 +1734,128 @@ seconds: number</code></pre>
 <article
   class="card 
   no-error 
-  has-info 
+  no-info 
+  no-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="SafeView">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-ok"></span> SafeView</h2>
+      <div class="badges">
+        <label for="c-10-shared-safeview-props" class="badge ok as-toggle">2 prop types</label>
+        
+        <label for="c-10-shared-safeview-stories" class="badge ok as-toggle">1 story</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/SafeView.stories.tsx">shared-safeview · ./stories/SafeView.stories.tsx</div>
+    
+    <div class="hint">Wraps a screen in the shared safe-area container and top gradient treatment.</div>
+    <div class="kv"><span class="chip">param: props - Child content and optional layout classes.</span><span class="chip">returns: The safe-area screen wrapper used by app pages.</span></div>
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-10-shared-safeview-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  <input id="c-10-shared-safeview-props" class="tg tg-props" type="checkbox" hidden />
+
+  <div class="panels">
+    
+    
+    
+        <div class="panel panel-props">
+          <div class="note ok">
+            <div class="row">
+              <span class="ex-name">Prop types <small>(react-docgen)</small></span>
+              <span class="badge ok">2 prop types</span>
+            </div>
+            <pre><code>Component: components\SafeView.tsx::default</code></pre>
+            <pre><code>Props:</code></pre>
+            <pre><code>/**
+ * Child subtree rendered inside the safe area wrapper.
+ */
+children: React.ReactNode
+
+/**
+ * Optional utility classes applied to the inner safe-area container.
+ */
+className?: string = &quot;&quot;</code></pre>
+          </div>
+        </div>
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { SafeView, Text } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Default</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Default = () =&gt; (
+  &lt;View style={{ width: 390, height: 720 }}&gt;
+    &lt;SafeView&gt;
+      &lt;View
+        style={{
+          flex: 1,
+          borderRadius: 24,
+          borderWidth: 1,
+          borderColor: &quot;rgba(15, 23, 42, 0.08)&quot;,
+          backgroundColor: &quot;rgba(255, 255, 255, 0.88)&quot;,
+          padding: 24,
+          justifyContent: &quot;space-between&quot;,
+        }}
+      &gt;
+        &lt;View style={{ gap: 8 }}&gt;
+          &lt;Text className=&quot;text-xs uppercase tracking-widest text-primary&quot;&gt;
+            Screen shell
+          &lt;/Text&gt;
+          &lt;Text size=&quot;2xl&quot; bold className=&quot;text-foreground&quot;&gt;
+            Shared safe-area wrapper
+          &lt;/Text&gt;
+          &lt;Text className=&quot;leading-6 text-muted-foreground&quot;&gt;
+            SafeView owns the ambient gradient and the screen padding used by
+            the current auth flow.
+          &lt;/Text&gt;
+        &lt;/View&gt;
+        &lt;View
+          style={{
+            borderRadius: 20,
+            backgroundColor: &quot;#eff6ff&quot;,
+            padding: 16,
+          }}
+        &gt;
+          &lt;Text className=&quot;text-sm text-foreground&quot;&gt;
+            Content is rendered inside the device-safe viewport.
+          &lt;/Text&gt;
+        &lt;/View&gt;
+      &lt;/View&gt;
+    &lt;/SafeView&gt;
+  &lt;/View&gt;
+);</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  no-error 
+  no-info 
   no-story-error
   no-doc-error"
   role="listitem"
@@ -967,35 +1864,28 @@ seconds: number</code></pre>
     <div class="title">
       <h2><span class="status-dot dot-ok"></span> SubmitButton</h2>
       <div class="badges">
-        <label for="c-4-shared-submitbutton-props" class="badge ok as-toggle">2 prop types</label>
-        <label for="c-4-shared-submitbutton-info" class="badge info as-toggle">1 info</label>
-        <label for="c-4-shared-submitbutton-stories" class="badge ok as-toggle">3 stories</label>
+        <label for="c-11-shared-submitbutton-props" class="badge ok as-toggle">2 prop types</label>
+        
+        <label for="c-11-shared-submitbutton-stories" class="badge ok as-toggle">3 stories</label>
         
       </div>
     </div>
     <div class="meta" title="./stories/SubmitButton.stories.tsx">shared-submitbutton · ./stories/SubmitButton.stories.tsx</div>
     
-    
-    
+    <div class="hint">Renders the shared submit button used by auth forms.</div>
+    <div class="kv"><span class="chip">param: props - Button props plus loading state and label text.</span><span class="chip">returns: A styled button with optional loading feedback.</span></div>
   </div>
 
   <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
   
-  <input id="c-4-shared-submitbutton-info" class="tg tg-info" type="checkbox" hidden />
-  <input id="c-4-shared-submitbutton-stories" class="tg tg-stories" type="checkbox" hidden />
   
-  <input id="c-4-shared-submitbutton-props" class="tg tg-props" type="checkbox" hidden />
+  <input id="c-11-shared-submitbutton-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  <input id="c-11-shared-submitbutton-props" class="tg tg-props" type="checkbox" hidden />
 
   <div class="panels">
     
     
-        <div class="panel panel-info">
-          
-    <div class="note info">
-      <div class="note-title">Info</div>
-      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
-    </div>
-        </div>
     
         <div class="panel panel-props">
           <div class="note ok">
@@ -1005,8 +1895,14 @@ seconds: number</code></pre>
             </div>
             <pre><code>Component: components\SubmitButton.tsx::default</code></pre>
             <pre><code>Props:</code></pre>
-            <pre><code>label: string
+            <pre><code>/**
+ * Visible label rendered inside the button when not loading.
+ */
+label: string
 
+/**
+ * Indicates whether the button should display a loading spinner and loading label.
+ */
 loading: boolean</code></pre>
           </div>
         </div>
@@ -1055,8 +1951,683 @@ import { View } from "react-native";</code></pre>
     
   </div>
 </article>
+<article
+  class="card 
+  no-error 
+  no-info 
+  no-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="VerifyEmailForm">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-ok"></span> VerifyEmailForm</h2>
+      <div class="badges">
+        
+        
+        <label for="c-12-auth-verifyemailform-stories" class="badge ok as-toggle">1 story</label>
+        
+      </div>
     </div>
+    <div class="meta" title="./stories/VerifyEmailForm.stories.tsx">auth-verifyemailform · ./stories/VerifyEmailForm.stories.tsx</div>
     
+    <div class="hint">Renders the email verification screen for the OTP flow.</div>
+    <div class="kv"><span class="chip">returns: The composed verify-email form screen.</span></div>
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-12-auth-verifyemailform-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+    
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { StorybookAuthProvider, VerifyEmailForm } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Default</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Default = () =&gt; &lt;VerifyEmailForm /&gt;;</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  no-error 
+  no-info 
+  no-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="VerifyPasswordResetForm">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-ok"></span> VerifyPasswordResetForm</h2>
+      <div class="badges">
+        
+        
+        <label for="c-13-auth-verifypasswordresetform-stories" class="badge ok as-toggle">1 story</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/VerifyPasswordResetForm.stories.tsx">auth-verifypasswordresetform · ./stories/VerifyPasswordResetForm.stories.tsx</div>
+    
+    <div class="hint">Renders the password reset verification screen.</div>
+    <div class="kv"><span class="chip">returns: The composed verify-reset form screen.</span></div>
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  
+  
+  <input id="c-13-auth-verifypasswordresetform-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+    
+    
+    
+        <div class="panel panel-stories">
+          
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { StorybookAuthProvider, VerifyPasswordResetForm } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Default</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Default = () =&gt; &lt;VerifyPasswordResetForm /&gt;;</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article>
+    </div>
+    <div class="error-groups" role="region" aria-label="Prop type error groups">
+        <section class="group">
+          <input id="no-component-import-found-toggle" class="group-tg" type="checkbox" hidden />
+          <label for="no-component-import-found-toggle" class="group-header">
+            <span class="caret">▸</span>
+            <span class="group-title">No component import found</span>
+            <span class="group-count">3</span>
+          </label>
+          <div class="group-cards">
+<article
+  class="card 
+  has-error 
+  has-info 
+  has-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="DemoField">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> DemoField</h2>
+      <div class="badges">
+        <label for="c-error-0-shared-passwordinput-err" class="badge err as-toggle">prop type error</label>
+        <label for="c-error-0-shared-passwordinput-info" class="badge info as-toggle">1 info</label>
+        <label for="c-error-0-shared-passwordinput-stories" class="badge err as-toggle">3/3 story errors</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/PasswordInput.stories.tsx">shared-passwordinput · ./stories/PasswordInput.stories.tsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-0-shared-passwordinput-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-0-shared-passwordinput-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-0-shared-passwordinput-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">Prop type error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;DemoField&quot; component.
+  41 | };
+  42 |
+&gt; 43 | const meta = {
+     | ^
+  44 |   title: &quot;Shared/PasswordInput&quot;,
+  45 |   component: DemoField,
+  46 |   tags: [&quot;autodocs&quot;],
+
+./stories/PasswordInput.stories.tsx:
+import type { Meta, StoryObj } from &quot;@storybook/react-native-web-vite&quot;;
+import { useEffect } from &quot;react&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import PasswordInput from &quot;@/components/PasswordInput&quot;;
+
+type DemoValues = {
+  password: string;
+};
+
+const DemoField = ({
+  showError = false,
+  defaultValue = &quot;&quot;,
+}: {
+  showError?: boolean;
+  defaultValue?: string;
+}) =&gt; {
+  const methods = useForm&lt;DemoValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: { password: defaultValue },
+  });
+
+  useEffect(() =&gt; {
+    if (!showError) {
+      return;
+    }
+
+    methods.setError(&quot;password&quot;, {
+      type: &quot;manual&quot;,
+      message: &quot;Password must be at least 8 characters.&quot;,
+    });
+  }, [methods, showError]);
+
+  return (
+    &lt;PasswordInput&lt;DemoValues&gt;
+      control={methods.control}
+      name=&quot;password&quot;
+      label=&quot;Password&quot;
+      placeHolder=&quot;Enter your password&quot;
+    /&gt;
+  );
+};
+
+const meta = {
+  title: &quot;Shared/PasswordInput&quot;,
+  component: DemoField,
+  tags: [&quot;autodocs&quot;],
+  decorators: [
+    (Story) =&gt; (
+      &lt;div style={{ width: 360 }}&gt;
+        &lt;Story /&gt;
+      &lt;/div&gt;
+    ),
+  ],
+  args: {
+    showError: false,
+    defaultValue: &quot;&quot;,
+  },
+} satisfies Meta&lt;typeof DemoField&gt;;
+
+export default meta;
+
+type Story = StoryObj&lt;typeof meta&gt;;
+
+export const Empty: Story = {};
+
+export const Filled: Story = {
+  args: {
+    defaultValue: &quot;password123&quot;,
+  },
+};
+
+export const Invalid: Story = {
+  args: {
+    showError: true,
+    defaultValue: &quot;short&quot;,
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Empty</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Filled</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Invalid</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { PasswordInput } from "vendor";</code></pre>
+              </div>
+          
+          
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  has-error 
+  has-info 
+  has-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="DemoField">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> DemoField</h2>
+      <div class="badges">
+        <label for="c-error-1-shared-textinput-err" class="badge err as-toggle">prop type error</label>
+        <label for="c-error-1-shared-textinput-info" class="badge info as-toggle">1 info</label>
+        <label for="c-error-1-shared-textinput-stories" class="badge err as-toggle">3/3 story errors</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/TextInput.stories.tsx">shared-textinput · ./stories/TextInput.stories.tsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-1-shared-textinput-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-1-shared-textinput-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-1-shared-textinput-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">Prop type error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;DemoField&quot; component.
+  41 | };
+  42 |
+&gt; 43 | const meta = {
+     | ^
+  44 |   title: &quot;Shared/TextInput&quot;,
+  45 |   component: DemoField,
+  46 |   tags: [&quot;autodocs&quot;],
+
+./stories/TextInput.stories.tsx:
+import type { Meta, StoryObj } from &quot;@storybook/react-native-web-vite&quot;;
+import { useEffect } from &quot;react&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import TextInput from &quot;@/components/TextInput&quot;;
+
+type DemoValues = {
+  email: string;
+};
+
+const DemoField = ({
+  showError = false,
+  defaultValue = &quot;&quot;,
+}: {
+  showError?: boolean;
+  defaultValue?: string;
+}) =&gt; {
+  const methods = useForm&lt;DemoValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: { email: defaultValue },
+  });
+
+  useEffect(() =&gt; {
+    if (!showError) {
+      return;
+    }
+
+    methods.setError(&quot;email&quot;, {
+      type: &quot;manual&quot;,
+      message: &quot;Enter a valid email address.&quot;,
+    });
+  }, [methods, showError]);
+
+  return (
+    &lt;TextInput&lt;DemoValues&gt;
+      control={methods.control}
+      name=&quot;email&quot;
+      label=&quot;Email&quot;
+      placeHolder=&quot;janedoe@example.com&quot;
+    /&gt;
+  );
+};
+
+const meta = {
+  title: &quot;Shared/TextInput&quot;,
+  component: DemoField,
+  tags: [&quot;autodocs&quot;],
+  decorators: [
+    (Story) =&gt; (
+      &lt;div style={{ width: 360 }}&gt;
+        &lt;Story /&gt;
+      &lt;/div&gt;
+    ),
+  ],
+  args: {
+    showError: false,
+    defaultValue: &quot;&quot;,
+  },
+  argTypes: {
+    showError: {
+      control: &quot;boolean&quot;,
+    },
+    defaultValue: {
+      control: &quot;text&quot;,
+    },
+  },
+} satisfies Meta&lt;typeof DemoField&gt;;
+
+export default meta;
+
+type Story = StoryObj&lt;typeof meta&gt;;
+
+export const Empty: Story = {};
+
+export const Filled: Story = {
+  args: {
+    defaultValue: &quot;jane@example.com&quot;,
+  },
+};
+
+export const Invalid: Story = {
+  args: {
+    showError: true,
+    defaultValue: &quot;jane@&quot;,
+  },
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Empty</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Filled</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Invalid</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { TextInput } from "vendor";</code></pre>
+              </div>
+          
+          
+        </div>
+    
+  </div>
+</article>
+<article
+  class="card 
+  has-error 
+  has-info 
+  has-story-error
+  no-doc-error"
+  role="listitem"
+  aria-label="LoginFieldsDemo">
+  <div class="head">
+    <div class="title">
+      <h2><span class="status-dot dot-err"></span> LoginFieldsDemo</h2>
+      <div class="badges">
+        <label for="c-error-2-auth-authfields-err" class="badge err as-toggle">prop type error</label>
+        <label for="c-error-2-auth-authfields-info" class="badge info as-toggle">1 info</label>
+        <label for="c-error-2-auth-authfields-stories" class="badge err as-toggle">1/2 story errors</label>
+        
+      </div>
+    </div>
+    <div class="meta" title="./stories/AuthFields.stories.tsx">auth-authfields · ./stories/AuthFields.stories.tsx</div>
+    
+    
+    
+  </div>
+
+  <!-- ⬇️ Hidden toggles must be siblings BEFORE .panels -->
+  <input id="c-error-2-auth-authfields-err" class="tg tg-err" type="checkbox" hidden />
+  <input id="c-error-2-auth-authfields-info" class="tg tg-info" type="checkbox" hidden />
+  <input id="c-error-2-auth-authfields-stories" class="tg tg-stories" type="checkbox" hidden />
+  
+  
+
+  <div class="panels">
+    
+        <div class="panel panel-err">
+          
+    <div class="note err">
+      <div class="note-title">Prop type error</div>
+      <div class="note-body"><pre><code>No component file found for the &quot;LoginFieldsDemo&quot; component.
+  55 | };
+  56 |
+&gt; 57 | const meta = {
+     | ^
+  58 |   title: &quot;Auth/AuthFields&quot;,
+  59 |   component: LoginFieldsDemo,
+  60 |   tags: [&quot;autodocs&quot;],
+
+./stories/AuthFields.stories.tsx:
+import type { Meta, StoryObj } from &quot;@storybook/react-native-web-vite&quot;;
+import AuthFields from &quot;@/auth/components/AuthFields&quot;;
+import { AUTH_FORM_INPUT_CONFIG } from &quot;@/auth/auth.constants&quot;;
+import { useForm } from &quot;react-hook-form&quot;;
+import { View } from &quot;react-native&quot;;
+
+type LoginValues = {
+  email: string;
+  password: string;
+};
+
+type ResetValues = {
+  otpCode: string;
+  password: string;
+  confirmPassword: string;
+};
+
+const LoginFieldsDemo = () =&gt; {
+  const methods = useForm&lt;LoginValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: {
+      email: &quot;&quot;,
+      password: &quot;&quot;,
+    },
+  });
+
+  return (
+    &lt;View style={{ width: 360, gap: 16 }}&gt;
+      &lt;AuthFields&lt;LoginValues&gt;
+        control={methods.control}
+        config={AUTH_FORM_INPUT_CONFIG.login}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const ResetFieldsDemo = () =&gt; {
+  const methods = useForm&lt;ResetValues&gt;({
+    mode: &quot;onChange&quot;,
+    defaultValues: {
+      otpCode: &quot;&quot;,
+      password: &quot;&quot;,
+      confirmPassword: &quot;&quot;,
+    },
+  });
+
+  return (
+    &lt;View style={{ width: 360, gap: 16 }}&gt;
+      &lt;AuthFields&lt;ResetValues&gt;
+        control={methods.control}
+        config={AUTH_FORM_INPUT_CONFIG.verifyPasswordReset}
+      /&gt;
+    &lt;/View&gt;
+  );
+};
+
+const meta = {
+  title: &quot;Auth/AuthFields&quot;,
+  component: LoginFieldsDemo,
+  tags: [&quot;autodocs&quot;],
+} satisfies Meta&lt;typeof LoginFieldsDemo&gt;;
+
+export default meta;
+
+type Story = StoryObj&lt;typeof meta&gt;;
+
+export const LoginConfig: Story = {};
+
+export const ResetConfig: Story = {
+  render: () =&gt; &lt;ResetFieldsDemo /&gt;,
+};
+</code></pre></div>
+    </div>
+        </div>
+    
+        <div class="panel panel-info">
+          
+    <div class="note info">
+      <div class="note-title">Info</div>
+      <div class="note-body">No description found. Write a jsdoc comment such as /** Component description */.</div>
+    </div>
+        </div>
+    
+    
+        <div class="panel panel-stories">
+          
+            <div class="note err">
+              <div class="row">
+                <span class="ex-name">Login Config</span>
+                <span class="badge err">story error</span>
+              </div>
+              
+              
+              
+              <pre><code>Could not generate snippet without component name.</code></pre>
+            </div>
+          
+          
+          <div class="note ok">
+                <div class="row">
+                  <span class="ex-name">Imports</span>
+                </div>
+                <pre><code>import { AuthFields } from "vendor";
+import { View } from "react-native";</code></pre>
+              </div>
+          
+          
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Reset Config</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const ResetConfig = () =&gt; &lt;ResetFieldsDemo /&gt;;</code></pre>
+            </div>
+        </div>
+    
+  </div>
+</article></div>
+        </section>
+      </div>
     <h2 class="section-title">Unattached Docs</h2>
     <div class="grid" role="list">
       
@@ -1097,15 +2668,17 @@ This Storybook is intentionally focused on:
 
 - shared UI used across the auth flow
 - auth-facing composition pieces
+- full auth screen assemblies where layout and copy matter
 - states that are easier to review visually than in code alone
 
-## Current first-wave targets
+## Current coverage
 
 | Area | Why it starts here |
 | --- | --- |
-| Shared feedback and actions | High reuse and easy visual review |
-| Auth typography and headers | Defines the feel of the current implemented scope |
-| OTP resend states | Small component, meaningful state change |
+| Shared inputs, feedback, and actions | High reuse and easy visual review |
+| Auth layout, headings, and headers | Defines the feel of the current implemented scope |
+| Config-driven auth fields | Shows how form config maps to real field rendering |
+| Full auth screen forms | Captures composition, spacing, and copy in one place |
 
 ## System note
 
@@ -1115,7 +2688,7 @@ This Storybook is part of the larger EasyBuy docs system:
 - Storybook shows component states
 - TypeDoc documents exported contracts
 
-As the docs grow, this surface should stay curated rather than turning into a dump of every primitive.
+As the docs grow, this surface should stay curated around authored components and real screen compositions rather than turning into a dump of every generated primitive.
 </code></pre>
           </div>
         </div>

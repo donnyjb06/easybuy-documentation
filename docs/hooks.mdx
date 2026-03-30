@@ -1,14 +1,16 @@
 ---
 title: Hooks
-description: The custom hooks that orchestrate auth form state and screen behavior.
+description: Auth-first hook guides for form state, resend timing, and screen orchestration.
 ---
+
+import Link from '@docusaurus/Link';
 
 <div className="doc-hero doc-hero--compact">
   <span className="doc-kicker">Reference Guide</span>
-  <h1>The hook layer is where shared form state meets route-level behavior.</h1>
+  <h1>The hook layer explains how auth behavior is assembled, not just where it lives.</h1>
   <p className="doc-summary">
-    The custom hooks are not generic utilities for the whole app. They are focused,
-    auth-specific orchestration points that sit between the provider and the screen components.
+    Each hook page answers two questions: what the hook is doing, and why the codebase keeps that behavior
+    in a hook instead of inside the screen component directly.
   </p>
 </div>
 
@@ -25,32 +27,44 @@ flowchart LR
   G["VerifyEmailForm"] --> H["useVerifyEmail"]
   H --> C
   H --> I["useResendTimer"]
-  J["VerifyPasswordResetForm"] --> K["useVerifyPasswordReset"]
+  J["RequestPasswordResetForm"] --> K["useRequestPasswordReset"]
   K --> C
-  K --> I
+  L["VerifyPasswordResetForm"] --> M["useVerifyPasswordReset"]
+  M --> C
+  M --> I
 ```
 
 </div>
 
 <div className="doc-grid doc-grid--2">
-  <div className="doc-card">
+  <Link className="doc-card doc-card--link" to="/docs/hooks/use-auth-form-state">
     <span className="doc-cardEyebrow">Shared</span>
     <h2>useAuthFormState</h2>
-    <p>Builds the reusable React Hook Form plus Zod state that most auth screens depend on.</p>
-  </div>
-  <div className="doc-card">
+    <p>Builds the reusable React Hook Form and Zod state that the auth screens depend on.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/hooks/use-resend-timer">
     <span className="doc-cardEyebrow">Shared</span>
     <h2>useResendTimer</h2>
-    <p>Owns the OTP cooldown window and the helper used to restart it.</p>
-  </div>
-  <div className="doc-card">
+    <p>Owns the cooldown clock used by OTP resend flows.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/hooks/use-auth-form">
     <span className="doc-cardEyebrow">Screen</span>
     <h2>useAuthForm</h2>
-    <p>Handles login and registration submit behavior for the shared auth form shell.</p>
-  </div>
-  <div className="doc-card">
+    <p>Coordinates login and registration submit behavior for the shared auth form shell.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/hooks/use-request-password-reset">
     <span className="doc-cardEyebrow">Screen</span>
-    <h2>useVerifyEmail / useVerifyPasswordReset</h2>
-    <p>Drive the OTP-based verification and recovery flows, including resend and redirect logic.</p>
-  </div>
+    <h2>useRequestPasswordReset</h2>
+    <p>Owns the request-reset workflow from email entry through redirect to the verify step.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/hooks/use-verify-email">
+    <span className="doc-cardEyebrow">Screen</span>
+    <h2>useVerifyEmail</h2>
+    <p>Combines verification submit logic, resend logic, timer state, and redirect behavior.</p>
+  </Link>
+  <Link className="doc-card doc-card--link" to="/docs/hooks/use-verify-password-reset">
+    <span className="doc-cardEyebrow">Screen</span>
+    <h2>useVerifyPasswordReset</h2>
+    <p>Runs the password-reset verification and resend workflow that the recovery flow depends on.</p>
+  </Link>
 </div>
