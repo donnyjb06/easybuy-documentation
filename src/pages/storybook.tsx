@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function StorybookPage(): ReactNode {
-  const storybookUrl = useBaseUrl('/storybook-static/index.html');
+  const storybookUrl = useBaseUrl('/storybook-static/');
 
   useEffect(() => {
     window.location.replace(storybookUrl);
